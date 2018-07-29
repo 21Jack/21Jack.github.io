@@ -1,114 +1,81 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="JK21">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Hexo"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Hexo"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://yoursite.com"/>
+<head>
+  <meta charset="utf-8" />
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-
-  <!-- Site Title -->
   <title>Hexo</title>
+  <meta name="author" content="JK21" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
   
-  <link rel="stylesheet" href="/css/style.light.css">
+  <meta name="description" content="[TOC]
+#类与对象
+#1属性的私有化属性的私有化  讲的是对属性的访问权限有限制对象的属性（包括） 1公开属性 2私有属性 3保护属性 （Python中没有）公开：在类的外部可以直接使用公开属性：属性名是普通单词（不以两个下划线开头的属性名）私有：在类的内部可以直接使用私有属性：属性名可以两个下" />
+  
 
-  <!-- Google Analytics -->
   
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
 
 </head>
 
-  <body>
-    <!-- Page Header -->
 
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:32:29.009Z"><a href="/2018/07/29/Python3基础/第十四天Python3类与对象/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
 
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">Untitled Post</p>
-          <p class="subtitle"></p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://github.com/<your-github-username>">
-                  
-                  Github
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="mailto:<your-email-address>">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By JK21</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2018-07-29</span>
-            <span class="time">20:49:23</span>
-          </span>
-          
-        </div>
-        <!-- Tags -->
-        
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p>[TOC]</p>
+    </header>
+    <div class="entry">
+      
+        <p>[TOC]</p>
 <p>#类与对象</p>
 <p>#1属性的私有化<br>属性的私有化  讲的是对属性的访问权限有限制<br>对象的属性（包括） 1公开属性 2私有属性 3保护属性 （Python中没有）<br>公开：在类的外部可以直接使用<br>公开属性：属性名是普通单词（不以两个下划线开头的属性名）<br>私有：在类的内部可以直接使用<br>私有属性：属性名可以两个下划线开头（不以两个下划线结束的属性名）</p>
 <p>创建一个类和对象</p>
@@ -187,42 +154,94 @@
 <p>python中管理内存的机制：<br>python是通过引用计数来管理内存的： 就看一个对象的引用计数的值是否为0，为0就销毁。<br>让一个变量存储对象的地址，那么这个变量就是对象的一个引用；如果变量存别的值或者删除这个变量，都会让这个引用消失</p>
 <p>应用：如果想要对象提前被销毁，就删除其所有的引用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line"></span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0, scores=[]):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.scores = scores</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># p1是一个变量，变量存的是对象的地址； 变量p1本身是在栈里面的</span><br><span class="line"># Person()返回值才是对象</span><br><span class="line">p1 = Person()</span><br><span class="line">p2 = p1</span><br><span class="line">lis1 = [p1]</span><br><span class="line">dict1 = &#123;&apos;aaa&apos;: p1&#125;</span><br><span class="line"></span><br><span class="line">p1 =10</span><br><span class="line">del p2</span><br></pre></td></tr></table></figure>
-        </div>
-      </div>
+      
     </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
   </div>
 </article>
 
 
 
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
-    </div>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/test/">test</a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
   </div>
-</footer>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 JK21
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
-  </body>
-</html>
 
+<div id='bg'></div>
+</body>
+</html>
