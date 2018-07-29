@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="[TOC]
+#类和对象（1） 
+1. 类与对象的定义类：具有相同属性和功能的对象的集合；是抽象的对象：类的实例；具体的12如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]
+##1" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:32:10.937Z"><a href="/2018/07/29/Python3基础/第十三天Python3类与对象/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[TOC]</p>
+<p>#类和对象（1） </p>
+<h1 id="1-类与对象的定义"><a href="#1-类与对象的定义" class="headerlink" title="1. 类与对象的定义"></a>1. 类与对象的定义</h1><p>类：具有相同属性和功能的对象的集合；是抽象的<br>对象：类的实例；具体的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]</span><br><span class="line">如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]</span><br></pre></td></tr></table></figure></p>
+<p>##1.1 类的声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class 类名(父类):         class 类名:</span><br><span class="line">    属性                       属性</span><br><span class="line">    方法                       方法</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>1.class : python中声明类的关键字</li>
+<li>2.类名：标识符，1.首字母大写！！！   2.见名知义</li>
+<li>3.冒号：固定格式 </li>
+<li>4.属性: 分类的字段和对象的字段    —–&gt; 属性</li>
+<li>5.方法: 对象方法(构造方法)、类方法、静态函数  ——&gt; 功能</li>
+</ul>
+<p>方法：就是声明在类中的函数(都有一个默认参数self，不需要调用的时候给他传值)<br>对象方法: 在类中直接声明的函数,带一个参数self;要使用对象来调用</p>
+<p>声明类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人类&quot;&quot;&quot;   # 类的说明文档</span><br><span class="line">    # 在类中声明了eat方法，默认有一个参数self,调用eat方法的时候，不需要给self传参</span><br><span class="line">    # 在类中直接声明的函数都是对象方法，对象方法必须使用对象来调用</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&apos;吃饭~&apos;)</span><br><span class="line">    # 直接写在类中函数，必须带参数self</span><br><span class="line">    # def run(self):</span><br><span class="line">    #     print(&apos;aaa&apos;)</span><br><span class="line">    # 注意：如果要在类中声明带参的对象方法，那么其他的参数必须写在self的后面</span><br><span class="line">    def run(self, num):</span><br><span class="line">        print(&apos;跑了%d米&apos;% (num))</span><br></pre></td></tr></table></figure></p>
+<p>创建对象 ： 变量 = 类（）  如：p1 = Person()<br>调用对象方法：变量.方法  如： p1.eat()<br>一个类可以创建多个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># p1就是Person类的一个实例（对象）</span><br><span class="line"># 可以通过对象去调用类中的对象方法、和使用类中声明的对象属性(字段)</span><br><span class="line">p1 = Person()</span><br><span class="line"># 调用对象方法</span><br><span class="line">p1.eat()</span><br><span class="line">p1.run(100)</span><br><span class="line"># 一个类可以创建多个对象</span><br><span class="line">p2 = Person()</span><br><span class="line">p2.eat()</span><br><span class="line">p2.run(80)</span><br></pre></td></tr></table></figure>
+<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">	&apos;&apos;&apos;说明文档&apos;&apos;&apos;</span><br><span class="line">	def eat(self):</span><br><span class="line">		print(&apos;吃饭&apos;)</span><br><span class="line">	def run(self,run): #self是自带参数，run设置的参数必须有值</span><br><span class="line">		print(&apos;跑了%d米&apos;%(num))</span><br><span class="line">p1 = Person()</span><br><span class="line">p1.eat()</span><br><span class="line">p1.run(100)</span><br></pre></td></tr></table></figure></p>
+<p>##1.2 对象属性和init方法</p>
+<p>实例一：init方法会自动被调用<br>init方法又叫构造方法。是在通过类创建对象的时候，自动调用的方法。<br>init方法的作用就是在创建对象的时候初始化对象的属性<br>init：对象的属性就是声明在这个方法中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    # __init__方法又叫构造方法。是在通过类创建对象的时候，自动调用的方法。</span><br><span class="line">    # __init__方法的作用就是在创建对象的时候初始化对象的属性</span><br><span class="line">    # __init__：对象的属性就是声明在这个方法中</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 在这个地方声明对象的属性。。。。</span><br><span class="line">        print(&apos;这个是init&apos;)</span><br><span class="line"></span><br><span class="line"># 在声明对象的时候会自动调用init方法</span><br><span class="line">p1 = Person()</span><br><span class="line">p2 = Person()</span><br></pre></td></tr></table></figure>
+<p>实例二：带参init方法</p>
+<p>init的方法的方法名固定:<strong> init </strong><br>但是参数是可以随意改变的(但是self参数不变)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # init的方法的方法名固定:__init__。但是参数是可以随意改变的(但是self参数不变)</span><br><span class="line">    def __init__(self, name=&apos;&apos;):</span><br><span class="line">        print(&apos;名字是:%s&apos;% (name))</span><br><span class="line"># 通过类创建对象的时候，要保证init方法里面的每一个参数都有值。通过给类名后面的括号里传参来保证</span><br><span class="line">dog1 = Dog(&apos;财财&apos;)</span><br><span class="line">dog2 = Dog(name=&apos;旺财&apos;)#关键字参数name= 传值 &apos;旺财&apos;</span><br><span class="line">dog3 = Dog()#参数有默认值  </span><br><span class="line"># 如果参数没有默认值 会报错</span><br><span class="line"># TypeError: __init__() missing 1 required positional argument: &apos;name&apos;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">名字是:财财</span><br><span class="line">名字是:旺财</span><br><span class="line">名字是:</span><br></pre></td></tr></table></figure>
+<p>实例三：对象属性</p>
+<p>属性：声明在类中的变量<br>对象属性: 要通过对象去使用；不同的对象可能会有不同的值；声明在init方法中的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person2:</span><br><span class="line">    &quot;&quot;&quot;人类&quot;&quot;&quot;</span><br><span class="line">    # 在init方法中声明对象属性: self.属性名 = 初值</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 声明一个对象属性name, 初始值为空串</span><br><span class="line">        self.name = &apos;无名氏&apos;</span><br><span class="line">        # 声明一个对象属性age, 初始值为10</span><br><span class="line">        self.age = 10</span><br><span class="line"># 通过Person2类创建对象p1</span><br><span class="line">p1 = Person2()</span><br><span class="line"># 通过p1对象去修改p1的name属性</span><br><span class="line">p1.name = &apos;张三&apos;</span><br><span class="line"># 通过对象去使用对象属性</span><br><span class="line">print(p1.name)</span><br><span class="line">p2 = Person2()</span><br><span class="line">p2.name = &apos;李四&apos;</span><br><span class="line">print(p2.name)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">张三</span><br><span class="line">李四</span><br></pre></td></tr></table></figure>
+<p>练习: 声明一个学生类，拥有属性:名字、年龄、电话。 拥有方法: 学习</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Student:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.name = &apos;张三&apos;</span><br><span class="line">        self.age = 0</span><br><span class="line">        self.tel = &apos;110&apos;</span><br><span class="line">    def study(self):</span><br><span class="line">        print(&apos;好好学习，天天向上&apos;)</span><br><span class="line">stu1 = Student()</span><br><span class="line">stu1.name = &apos;李四&apos;</span><br><span class="line">print(stu1.name, stu1.age, stu1.tel)</span><br><span class="line"># 调用对象方法(给对象发送消息)</span><br><span class="line">stu1.study()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">李四 0 110</span><br><span class="line">好好学习，天天向上</span><br></pre></td></tr></table></figure>
+<p>实例四：创建对象的时候赋初值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 实例四：创建对象的时候赋初值</span><br><span class="line">class Student2:</span><br><span class="line">    def __init__(self, name1=&apos;&apos;, age1=0, tel1=&apos;&apos;):</span><br><span class="line">        self.name = name1</span><br><span class="line">        self.age = age1</span><br><span class="line">        self.tel = tel1</span><br><span class="line"># 在创建对象的时候给对象属性赋初值</span><br><span class="line">stu2 = Student2(&apos;小明&apos;, 18, &apos;112&apos;)</span><br><span class="line">print(stu2.name)</span><br><span class="line">stu3 = Student2(name1=&apos;小王&apos;)</span><br><span class="line">print(stu3.name)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">小明</span><br><span class="line">小王</span><br></pre></td></tr></table></figure>
+<p>##1.3 self</p>
+<p>类中的对象方法都有一个默认参数self:</p>
+<ol>
+<li>调用带有默认参数self的方法，不需要给self传参。系统会自动将调用当前方法的对象传给self</li>
+<li>在方法中使用self就相当于使用调用方法的对象（只能使用self，不能重新给self赋值）</li>
+</ol>
+<p>创建一个类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        # 声明对象属性</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&apos;吃饭&apos;)</span><br><span class="line">    #  声明一个对象方法run</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;self&apos;,self)</span><br><span class="line">        # 在对象方法中使用对象的属性，直接用self去获取属性</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br></pre></td></tr></table></figure>
+<p>通过对象p1去调用run方法，系统会将self=p1<br>这个时候在run方法中，p1和self是一个东西</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1.run()</span><br><span class="line">print(&apos;p1&apos;, p1)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self &lt;__main__.Person object at 0x004EB2D0&gt;</span><br><span class="line">小明跑起来</span><br><span class="line">p1 &lt;__main__.Person object at 0x004EB2D0&gt;</span><br></pre></td></tr></table></figure>
+<p>从存储的角度来看 变量p1 和 self 存储地址都是一样的 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        # 声明对象属性</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    def eat(self):</span><br><span class="line">    	print(&apos;self&apos;,self)</span><br><span class="line">        print(&apos;吃饭&apos;)</span><br><span class="line"></span><br><span class="line">    #  声明一个对象方法run</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;self&apos;,self)</span><br><span class="line">        # 在对象方法中使用对象的属性，直接用self去获取属性</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br><span class="line">        # self.eat()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 创建一个Person对象</span><br><span class="line">p1 = Person(&apos;小明&apos;, 10)</span><br><span class="line"># eat中的self = p2</span><br><span class="line">p2 = Person(&apos;小红&apos;, 20)</span><br><span class="line">p2.run()</span><br></pre></td></tr></table></figure>
+<p>结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self &lt;__main__.Person object at 0x01DF3630&gt;</span><br><span class="line">小红跑起来</span><br><span class="line">self &lt;__main__.Person object at 0x01DF3630&gt;</span><br><span class="line">吃饭</span><br></pre></td></tr></table></figure>
+<p>练习:声明一个圆类， 拥有属性：半径  拥有方法: 计算圆的面积、计算圆的周长</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line">class Circle:</span><br><span class="line">    &quot;&quot;&quot;圆&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, radius=0):</span><br><span class="line">        self.radius = radius</span><br><span class="line">    # 在对象方法中可以通过self去使用对象属性</span><br><span class="line">    def area(self):</span><br><span class="line">        return pi*(self.radius**2)</span><br><span class="line">    def girth(self):</span><br><span class="line">        return 2 * pi * self.radius</span><br><span class="line">c1 = Circle(10)</span><br><span class="line">print(&apos;%.2f&apos;% c1.area())</span><br><span class="line">print(&apos;%.2f&apos;% c1.girth())</span><br><span class="line"></span><br><span class="line">c2 = Circle(3)</span><br><span class="line">print(c2.area())</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">314.16</span><br><span class="line">62.83</span><br><span class="line">28.274333882308138</span><br></pre></td></tr></table></figure>
+<p>##1.4  对象属性的增删改查</p>
+<p>先创建一个类和对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # Dog类有name和age两个属性</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">dog1 = Dog(&apos;旺财&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>###1.4.1  查<br>方式1: 对象.属性<br>特点:如果属性存在就获取属性的值。如果属性不存在就会报AttributeError错误</p>
+<p>方式2：getattr(对象, 属性名, 默认值) –&gt; 获取指定对象的指定属性<br>如果不设置默认值： 属性如果存在就获取属性的值；不存在就报错<br>如果设置默认值：属性如果存在就获取属性的值；属性不存在的时候，不报错，并将默认值作为结果</p>
+<p>方式3：对象.<strong> getattribute </strong>(属性名)<br>获取指定对象的指定属性。如果属性不存在就会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(dog1.name)</span><br><span class="line"># print(dog1.score)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;score&apos;</span><br><span class="line"></span><br><span class="line">print(getattr(dog1, &apos;name&apos;, None))</span><br><span class="line">print(getattr(dog1, &apos;score&apos;, None))</span><br><span class="line"></span><br><span class="line">print(dog1.__getattribute__(&apos;name&apos;))</span><br><span class="line"># print(dog1.__getattribute__(&apos;sex&apos;))  # AttributeError</span><br></pre></td></tr></table></figure>
+<p>###1.4.2  改（修改）<br>方式1: 对象.存在的属性 = 新值<br>方式2：setattr(对象, 属性名, 新值)<br>方式3：对象.<strong> setattr </strong>(属性名, 新值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dog1.name = &apos;大黄&apos;</span><br><span class="line">print(dog1.name)</span><br><span class="line"></span><br><span class="line">setattr(dog1, &apos;name&apos;, &apos;小黄&apos;)</span><br><span class="line">print(dog1.name)</span><br><span class="line"></span><br><span class="line">dog1.__setattr__(&apos;name&apos;, &apos;小黑&apos;)</span><br><span class="line">print(dog1.name)</span><br></pre></td></tr></table></figure></p>
+<p>###1.4.3  增（添加）<br>python中可以动态的给对象添加属性<br>方式1：对象.不存在的属性 = 值<br>方式2：setattr(对象, 不存在的属性名, 新值)<br>方式3：对象.<strong> setattr </strong>(不存在的属性名, 新值)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dog1.sex = &apos;男&apos;</span><br><span class="line">print(dog1.sex)</span><br><span class="line"></span><br><span class="line">setattr(dog1, &apos;score&apos;, 100)</span><br><span class="line">print(dog1.score)</span><br></pre></td></tr></table></figure>
+<p>###1.4.4 删除属性<br>方式1：del 对象.属性<br>方式2：delattr(对象, 属性名)<br>方式3：对象.<strong> delattr </strong>(属性名)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># del dog1.age</span><br><span class="line"># print(dog1.age)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;age&apos;</span><br><span class="line"></span><br><span class="line"># delattr(dog1, &apos;age&apos;)</span><br><span class="line"># print(dog1.age)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;age&apos;</span><br><span class="line"></span><br><span class="line">dog1.__delattr__(&apos;age&apos;)</span><br><span class="line"># print(dog1.age)</span><br></pre></td></tr></table></figure></p>
+<p>###1.4.5 判断对象是否拥有某个属性<br>方式：hasattr(对象, 属性名)  —&gt; 判断指定的对象是否拥有指定的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = hasattr(dog1, &apos;name&apos;)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>实例1：对象属性的操作只对当前那一个对象有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0, id_num=&apos;&apos;, sex=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.id_num = id_num</span><br><span class="line">        self.sex = sex</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p1 = Person(&apos;小明&apos;, 10)</span><br><span class="line"># 给不存在的属性赋值，就是添加属性</span><br><span class="line">p1.score = 100</span><br><span class="line">print(p1.score+100)</span><br><span class="line"></span><br><span class="line">del p1.name</span><br><span class="line"># print(p1.name)</span><br><span class="line"></span><br><span class="line">p2 = Person(&apos;张三&apos;, 30)</span><br><span class="line">print(p2.name)</span><br><span class="line"># print(p2.score)  # AttributeError: &apos;Person&apos; object has no attribute &apos;score&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 注意：1.对对象属性的增、删、改、查是针对指定的那个一个对象。不会影响其他的对象</span><br><span class="line">#      2.实际开发用的时候，一般只用获取对象属性的值和修改对象属性的值。想要添加和删除属性，一般都是在init方法中去操作</span><br></pre></td></tr></table></figure>
+<p>实例二：防止不必要的属性被添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # 通过给__slots__赋值，可以限制类中对象的属性有哪些，防止一个不必要的属性被添加</span><br><span class="line">    __slots__ = (&apos;name&apos;, &apos;age&apos;, &apos;color&apos;)</span><br><span class="line"></span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0, color=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.color = color</span><br><span class="line">        # self.sex = &apos;男&apos;  # AttributeError，因为__slots__中没有&apos;sex&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dog1 = Dog(&apos;笑话&apos;, 3, &apos;Yellow&apos;)</span><br><span class="line"># dog1.name1 = &apos;大黄&apos;</span><br><span class="line"># dog1.sex = &apos;男&apos;</span><br><span class="line"></span><br><span class="line">del dog1.name</span><br><span class="line"># 注意：__slots__中规定的属性，只能少不能多。删除属性是不受影响的</span><br></pre></td></tr></table></figure>
+<p>注意：<strong> slots </strong>中规定的属性，只能少不能多。删除属性是不受影响的</p>
+<h2 id="1-5-内置类属性"><a href="#1-5-内置类属性" class="headerlink" title="1.5 内置类属性"></a>1.5 内置类属性</h2><p>先创建一个类和对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    狗:狗有name、age、color等属性</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    def __init__(self,name=&apos;&apos;,age=0, color=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.color = color</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br><span class="line"></span><br><span class="line">    def shout(self):</span><br><span class="line">        print(&apos;%s在叫唤&apos;% (self.name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dog = Dog()</span><br></pre></td></tr></table></figure>
+<p>下列一些常用类属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 内置的类属性是属于类的，需要通过类去使用</span><br><span class="line"></span><br><span class="line"># 1.类.__name__ : 获取类的名字(只有类有这个属性)</span><br><span class="line">class_name = Dog.__name__  # &apos;Dog&apos;</span><br><span class="line">print(class_name, type(class_name))</span><br><span class="line"></span><br><span class="line"># 2.类.__doc__ : 获取类的说明文档</span><br><span class="line">print(Dog.__doc__)</span><br><span class="line"></span><br><span class="line"># 3.__dict__</span><br><span class="line"># 类.__dict__ : 获取类中所有的类属性(类字段)和对应的值的键值对 --&gt; 结果是字典</span><br><span class="line"># 对象.__dict__ : 以键值对的形式获取指定对象的所有的属性和值</span><br><span class="line">print(Dog.__dict__)</span><br><span class="line"></span><br><span class="line">dog.sex = &apos;男&apos;</span><br><span class="line">print(dog.__dict__)</span><br><span class="line"></span><br><span class="line"># 4. 类.__module__ : 获取类所在的模块的名字</span><br><span class="line">print(Dog.__module__, __name__)</span><br><span class="line"></span><br><span class="line"># 5. 类.__bases__ : 获取指定类的基类</span><br><span class="line">print(Dog.__bases__)</span><br></pre></td></tr></table></figure>
+<h1 id="练习-：-将json文件中的内容-放入对象中"><a href="#练习-：-将json文件中的内容-放入对象中" class="headerlink" title="练习 ： 将json文件中的内容 放入对象中"></a>练习 ： 将json文件中的内容 放入对象中</h1><p>准备工作<br>新建一个项目<br>新建一个Python File  和 一个 名为student的json文件 （student.json）里面存入以下内容。请确保 Python File 和 （student.json）在同一项目文件中</p>
+<p>需要掌握的内容 </p>
+<p>文件的打开 读取</p>
+<p>数据的处理</p>
+<p>列表、字典的</p>
+<p>函数的建立 和调用</p>
+<p>模块的导入</p>
+<p>类和对象的基本运用</p>
+<p>（student.json）文件内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;&quot;name&quot;:&quot;路飞&quot;, &quot;age&quot;:17, &quot;sex&quot;:&quot;男&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;娜美&quot;, &quot;age&quot;:18, &quot;sex&quot;:&quot;女&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;索罗&quot;, &quot;age&quot;:23, &quot;sex&quot;:&quot;男&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;乔巴&quot;, &quot;age&quot;:10, &quot;sex&quot;:&quot;男&quot;&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>Python file 文件 名：练习.py</p>
+<p>编程思想：</p>
+<p>首先你要获取  （student.json）文件内容 (打开文件 ，读取文件内容，关闭文件)（方法 ）</p>
+<p>这里要用到json模块的导入操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#模块的导入2两种方法</span><br><span class="line">#1  模块导入:  import json     调用: json.load(打开的文件)</span><br><span class="line">#2  导入: from json import load  调用:  load(打开的文件)</span><br><span class="line">#打开文件读取文件的简化操作</span><br><span class="line">with open（文件路径，&apos;r&apos;（读的打开文件模式），encodeing=&apos;utf-8&apos;(编码方式)） as f(变量):</span><br><span class="line">#with open()  as 把open函数的返回值 赋值 给变量 f</span><br><span class="line"></span><br><span class="line">便于理解</span><br><span class="line">f = open(&apos;test.txt&apos;,&apos;r&apos;,encoding=&apos;utf-8&apos;)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">read() 读取的是字符串 适用于文本 load（）json文件是什么数据结构 读出来就是什么数据结构（字典、列表、字符串）</span><br></pre></td></tr></table></figure>
+<p>这里定义一个函数 （获取  json 文件里的数据） 作用就是便于调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 导入json模块中load（）</span><br><span class="line">from json import load</span><br><span class="line"># 定义一个名为get_json_data的函数</span><br><span class="line">def get_json_data():</span><br><span class="line">	with open(&apos;student.json&apos;,&apos;r&apos;,encodeing=&apos;utf-8&apos;) as f:</span><br><span class="line">		return load(f)    ## load(f):读的结果</span><br></pre></td></tr></table></figure>
+<p>拿到了数据 就要把它对象化处理 所以要声明一个类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 声明类</span><br><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人物&quot;&quot;&quot;</span><br><span class="line">	#这里这样定义 给参数设置默认参数 就是等数据生成对象的时候可以赋值给对象属性</span><br><span class="line">    def __init__(self,name=&apos;&apos;, age=0, sex=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.sex = sex</span><br></pre></td></tr></table></figure>
+<p>然后就是数据的处理了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    all_data =get_json_data()</span><br><span class="line">    clube=[]</span><br><span class="line">    for item in all_data:#item 字典</span><br><span class="line">        # 将字典中的每个键值对 对应的值 存到对象催要的属性中</span><br><span class="line">        #  开发中</span><br><span class="line">        p=Person()</span><br><span class="line">        for key in item:  #遍历字典里的key:value</span><br><span class="line">            setattr(p,key,item[key])</span><br><span class="line">            print(p.__dict__,key,item[key])</span><br><span class="line">        clube.append(p)</span><br><span class="line">        print(p.__dict__)</span><br><span class="line">    for item in clube:</span><br><span class="line">        print(item.name,item.__dict__)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

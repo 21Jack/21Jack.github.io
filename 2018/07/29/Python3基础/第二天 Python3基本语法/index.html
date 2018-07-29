@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="[TOC]
+#1.第一个Python3.x程序 hello world小程序/
+#1.hello world小程序
+
+注意:我们目前讲的python都是python 3.x
+print是Python3中的内置函数
+功能：在控制台打印括号中的内容
+友情提示：print函数只是在程序员自己做测试的时候去" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:31:41.125Z"><a href="/2018/07/29/Python3基础/第二天 Python3基本语法/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[TOC]</p>
+<p>#1.第一个Python3.x程序 hello world小程序/</p>
+<p>#1.hello world小程序</p>
+<ul>
+<li>注意:我们目前讲的python都是python 3.x</li>
+<li>print是Python3中的内置函数</li>
+<li>功能：在控制台打印括号中的内容</li>
+<li>友情提示：print函数只是在程序员自己做测试的时候去使用</li>
+</ul>
+<p>##1.1第一个Python 3.x程序</p>
+<ul>
+<li>对于大多数程序语言，第一个入门编程代码便是”Hello World！”，以下代码为使用Sublime输出”Hello World！”：<pre><code>print (&quot;Hello  World！&quot;)
+</code></pre>   执行以上代码，输出结果为：<pre><code>Hello, Python!  
+</code></pre>##1.2 sublime常用的快捷键</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># ctr+b   			执行(sublime)</span><br><span class="line"># ctr+/				单行注释</span><br><span class="line"># ctr+c				拷贝</span><br><span class="line"># ctr+v   			粘贴  </span><br><span class="line"># ctr+s   			保存</span><br><span class="line"># ctr+z   			撤销</span><br><span class="line"># ctr+shift+z  		反撤销</span><br><span class="line"># ctr+a   			全选 </span><br><span class="line"># ctr+x   			剪切 </span><br><span class="line"># …………</span><br></pre></td></tr></table></figure>
+<p>##1.3 关于版本号的解释</p>
+<ul>
+<li>版本号A.B.C  </li>
+<li>A在语言做重大修改，一般不兼容之前的版本。</li>
+<li>B在做功能增加的时候，B的值增加。</li>
+<li>C在修复bug的时候，值增加</li>
+</ul>
+<p>#2 Python3.X基础语法</p>
+<p>##1.注释</p>
+<ul>
+<li>注释就是穿插代码中的说明性文字，对于代码实现功能无任何作用，注释不会参与执行。在写代码–的时候需要经常写注释。<br>###1.1单行注释</li>
+<li>单行注释：就是在注释的内容前加 ‘#’</li>
+</ul>
+<p>单行注释方法如下：</p>
+<pre><code># 注释一行注释 
+# 这是第二行注释
+</code></pre><p>###1.2多行注释</p>
+<ul>
+<li>在每一行前面加 #</li>
+<li>使用 ‘’’ 或者 “”” 括起来(推荐使用三个”””)</li>
+</ul>
+<p>多行注释方法如下：</p>
+<pre><code># 这是多行注释1
+# 这是多行注释2
+# 这是多行注释3
+
+&apos;&apos;&apos;
+这是多行注释1
+这是多行注释2
+这是多行注释3
+&apos;&apos;&apos;
+&quot;&quot;&quot;
+这是多行注释1
+这是多行注释2
+这是多行注释3
+&quot;&quot;&quot; 
+</code></pre><p>##2.标识符</p>
+<ul>
+<li>在开发中使用的所有的名字都是标识符(包括变量名、函数名、类名、对象名等)<br>###2.1硬性要求</li>
+<li>1.由字母(a-z,A-Z)、数字(0-9)、下滑线(_)组成  </li>
+<li>2.数字不能开头 </li>
+<li>3..不能是保留字(关键字)<br>###2.2规范</li>
+<li>1.要见名知意 </li>
+<li><p>2.PEP 8规范(变量名)：全部小写，如果名字是由多个单词组成，单词之间以_分开</p>
+<pre><code>cat_name = 1 #PEP 8
+</code></pre><p>###2.3补充</p>
+</li>
+<li><p>驼峰式：如果名字是由多个单词组成，第一个单词首字母小写，后边的每个单词第一个字母大写。</p>
+<pre><code>cat_Name = 1     #驼峰式
+</code></pre></li>
+<li><p>友情提示：python中大小写敏感：Key 和 key是不一样的</p>
+</li>
+</ul>
+<p>###2.4标识符报错一般形式</p>
+<pre><code># 空格 报错 ：IndentationError: unexpected indent                 //缩进错误:意外的缩进
+# a+b=1                   # SyntaxError: can&apos;t assign to operator  //句法错误:不能分配给操作符
+# 2d=1                    # SyntaxError: invalid syntax            //无效的语法
+# for = 1               # SyntaxError: invalid syntax
+</code></pre><p>##3.关键字(保留字)<br>在python中有自己独特功能的一些单词，程序员在使用标识符的时候，不能使用关键字。</p>
+<ul>
+<li><p>导入内置keyword模块</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import keyword</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+<ul>
+<li><p>列出常用的关键字列表</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(keyword.kwlist)</span><br></pre></td></tr></table></figure>
+<p>   执行以上代码，输出结果为：</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;False&apos;, &apos;None&apos;, &apos;True&apos;, &apos;and&apos;, &apos;as&apos;, &apos;assert&apos;, &apos;break&apos;, &apos;class&apos;,&apos;continue&apos;, &apos;def&apos;, &apos;del&apos;, &apos;elif&apos;, &apos;else&apos;, &apos;except&apos;, &apos;finally&apos;, &apos;for&apos;,&apos;from&apos;, &apos;global&apos;, &apos;if&apos;, &apos;import&apos;, &apos;in&apos;, &apos;is&apos;, &apos;lambda&apos;, &apos;nonlocal&apos;, &apos;not&apos;, &apos;or&apos;, &apos;pass&apos;, &apos;raise&apos;, &apos;return&apos;, &apos;try&apos;, &apos;while&apos;, &apos;with&apos;, &apos;yield&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##4.行与缩进</p>
+<p>在python中，语法对缩进有严格的规范。同一级的代码要写在一个缩进下(缩进-&gt;空格和制表符tab）</p>
+<ul>
+<li>行：可以通过换行将代码分块。要求函数定义和其他代码之间要有一个换行。类的声明和其他代码之间要有两个换行。(不按要求来不会报错)<pre><code>abc = 1 
+# abc多了一个空格报：IndentationError（缩进错误）
+</code></pre></li>
+<li>注意: 语法相关的所有的符号，都必须是英文输入法下的符号。<br>##5.多行语句</li>
+<li><p>一行代码很长，需要多行显示</p>
+</li>
+<li><p>python中，如果一行只有一个语句，那么语句后面可以不写分号(写了不会报错)。<br>   如果一行中有多条语句，那么语句间要用分号(;)分开</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = 1 ; ad = 2</span><br><span class="line">b = 2</span><br><span class="line">c = 3</span><br><span class="line">d = 4</span><br><span class="line">sum1 = a + b + c + d</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+<ul>
+<li><p>将一行代码写成多好行</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum2 = aaa + \</span><br><span class="line">		bbb + \</span><br><span class="line">		ccc + \</span><br><span class="line">		ddd</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>列表、字典、元祖、集合的元素在多行显示的时候，可以不用\连接</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;</span><br><span class="line">  &apos;name&apos;:&apos;张三&apos;, </span><br><span class="line">  &apos;age&apos;:18, </span><br><span class="line">  &apos;gender&apos;:&apos;男&apos;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#3 Python3.X基本数据类型</p>
+<ul>
+<li>python3中标准的数据类型有三种  </li>
+<li>Number(数字)、Str(字符串)、List(列表)、Tuples(元祖)、Sets(集合)，Dict(字典)  </li>
+<li>可以通过type()函数去查看值的类型<br>##3.1数字</li>
+<li><p>python中的数字分为: 整型(整数)、浮点型(小数)、布尔、复数(实部+虚部)</p>
+</li>
+<li><p>整型(int)：python3中只有长整型int，python2中有long 例如: 23、100、-25、0</p>
+</li>
+<li><p>浮点型(float): python3只有float类型.例如:12.9, 1.0, 0.0, -10.5, 2e2, 2e-2</p>
+</li>
+<li><p>布尔(bool)：表示真假(是否)的值，值只有True(真)和False(假)两个值, True是1，False是0</p>
+</li>
+<li><p>复数(complex)：由实部和虚部组成， 例如:10+1j, 12.7+2j<br>可以通过type()函数去查看值的类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(type(10))			#&lt;class &apos;int&apos;&gt;</span><br><span class="line">print(type(12.5))		#&lt;class &apos;float&apos;&gt;  </span><br><span class="line">print(type(True))		#&lt;class &apos;bool&apos;&gt;</span><br><span class="line">print(type(10+2j))		#&lt;class &apos;complex&apos;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##3.2.字符串</p>
+<ul>
+<li><p>由单引号或者双引号括起来的数据就是字符串（推荐使用单引号）</p>
+</li>
+<li><p>（python中没有字符类型，所说的字符就是用引号括起来的长度是1的字符串）</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;			  #空串，长度是0</span><br><span class="line">&apos;Hello world&apos;     #字符串中单独的一个符号就是一个字符</span><br><span class="line">&apos;123&apos;</span><br><span class="line">&apos;!2dfs&apos; </span><br><span class="line">&apos; &apos;    		  #空格字符串是有意义的字符串</span><br><span class="line">&apos;中文&apos;</span><br><span class="line">#python需要转义字符来表示一些特殊的字符串：包括一些有特殊意义和特殊功能的字符串</span><br><span class="line">print(&apos;\&apos;&apos;)   # &apos;</span><br><span class="line">print(&apos;\&apos;)  # \</span><br><span class="line">str1 = &apos;\t床前明月光,\n疑是地上霜&apos;  #\n-&gt;换行  \t-&gt;制表符</span><br><span class="line">print(str1)</span><br><span class="line">print(&apos;a\nb&apos;)</span><br><span class="line">运行结果如下：</span><br><span class="line">  </span><br><span class="line">    &apos;</span><br><span class="line">    </span><br><span class="line">    \</span><br><span class="line">    </span><br><span class="line">     床前明月光,</span><br><span class="line">    </span><br><span class="line">    疑是地上霜</span><br><span class="line">  </span><br><span class="line">a\nb</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;</span><br><span class="line">\</span><br><span class="line">床前明月光,</span><br><span class="line">疑是地上霜</span><br><span class="line">a\nb</span><br></pre></td></tr></table></figure>
+<p>在字符串前加r/R,阻止转义字符转义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(r&apos;a\nb&apos;)  # 原样输入</span><br><span class="line">print(R&apos;\ta&apos;) # 阻止转义符并且正常输入</span><br></pre></td></tr></table></figure></p>
+<p>运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a\nb</span><br><span class="line">\ta</span><br></pre></td></tr></table></figure></p>
+<p>​     </p>
+<p>#4进制转换<br>进制：十进制、二进制、八进制、十六进制(要求：认识、会转换)  </p>
+<p>##4.1十进制<br>十进制：<br>基数：0，1，2，3，4，5，6，7，8，9<br>逢十进一 （10 -&gt; 10）<br>123 ：100+20+3 = $1<em>10^2 + 2</em>10^1 + 3<em>10^0 $ = 123 (任何数的0次方都是1)<br>例：8976：$6</em>10^0 + 7<em>10^1 + 9</em>10^2 + 8*10^3$ = 8976</p>
+<p>##4.2二进制<br>二进制：(计算机在存储数据的时候，存的都是二进制数)<br>基数：0，1  （1111 1001 0001）<br>逢二进一（10 -&gt; 2）<br>1101：$1<em>2^0 + 0</em>2^1 + 1<em>2^2 + 1</em>2^3 $= 1 + 0 + 4 + 8 = 13</p>
+<pre><code>0b1101  #在二进制数前加&quot;0b&quot;
+</code></pre><p>##4.3八进制<br>八进制：<br>基数：0，1，2，3，4，5，6，7<br>26：$ 6<em>8^0 + 2</em>8^1 $ = 6 + 16 = 22<br>10：$  8^1$ = 8</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0o10    #在数字前加&apos;0o&apos;表示八进制数</span><br></pre></td></tr></table></figure>
+<p>##4.4十六进制<br>十六进制：<br>基数：0，1，2，3，4，5，6，7，8，9，a/A(10),b/B(11),c/C(12),d/D(13),e/E(14),f/F(15)<br>1f : $1<em>16^1 + 15</em>16^0$ = 16 + 15 = 31<br>ab : $10<em>16^1 + 11</em>16^0$ = 160 + 11 = 171</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0xa1   #在数字前加&apos;0x&apos;表示十六进制数</span><br></pre></td></tr></table></figure>
+<p>##4.5其他进制转换成十进制<br>其他进制转换成十进制：相乘求和<br>二进制转十进制：101011：$ 2^0 + 2^1 + 2^3 + 2^5 $ = 1+2+8+32 = 43<br>八进制转十进制：26：$ 6<em>8^0 + 2</em>8^1 $ = 6 + 16 = 22<br>十六进制转十进制：1f : $1<em>16^1 + 15</em>16^0$ = 16 + 15 = 31</p>
+<p>##4.5十进制转换成其他进制<br>十进制转换成其他进制: 整除取余法<br> 100 —&gt;(2)1100100     100-&gt;(8)144   100-&gt;(16)64</p>
+<p>##4.6二进制转换成八进制<br>每三位二进制转换成一位八进制<br> (2)001 100 100 ——&gt;(8)144    </p>
+<p>##4.7二进制转换成十六进制<br>每四位二进制转换成一位16进制<br>(2)0110 0100 -&gt; (16)64</p>
+<p>##4.8程序中的进制转换<br>    print(bin(10))  #将括号中的数字转换成二进制数,返回的是字符串形式的数据<br>    print(bin(0o75))<br>    print(bin(0xaf))</p>
+<pre><code>print(oct(10))   #将括号里面的数据转换成8进制
+print(oct(0b110011))
+
+print(hex(10))  #将括号里面的数据转换成16进制
+print(hex(0o67)) 
+</code></pre><p>运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0o12</span><br><span class="line">0o63</span><br><span class="line">0xa</span><br><span class="line">0x37</span><br><span class="line">0b1100</span><br><span class="line">0o100</span><br><span class="line">0x80</span><br></pre></td></tr></table></figure>
+<p>#5变量<br>变量用来存储数据的<br>在python中声明变量不用指定类型，一个变量可以存储任何类型的数据</p>
+<p>##1.声明变量</p>
+<p>声明变量：变量名 = 初值</p>
+<p>###1.1变量名</p>
+<p>变量名:1、标识符， 2、PEP 8 命名方式  3、见名知意</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = &apos;YuTing&apos;   #声明一个变量，并且赋了初值为&apos;YuTing&apos;</span><br></pre></td></tr></table></figure>
+<p>###1.2赋值符号 ‘=’<br>= ：赋值符号，要求赋值符号的左边必须是变量,右边是有值的表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = 10 + 20</span><br><span class="line">10 = 20  # SyntaxError&lt;语法错误&gt;</span><br></pre></td></tr></table></figure>
+<p>###1.3.初值<br>初值：python中声明变量必须赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = &apos;张三&apos;   				 #声明一个变量，并且赋了初值为&apos;张三&apos;</span><br><span class="line">a = b = c = 10   			   #同时声明三个变量a,b,c,他们的初值都是10  </span><br><span class="line">a1, b1, c1 = 10, 12.6, &apos;aaa&apos;   #同时声明了三个变量a1,b1,c1；他们对应的初值分别是10,12.6,&apos;aaa&apos;</span><br><span class="line">name = 100					   #一个变量可以存储多种类型的值(python是动态语言)</span><br></pre></td></tr></table></figure>
+<p>#6运算符<br>python中的运算符:算术运算符、比较运算符、赋值运算符、逻辑运算符</p>
+<p>##6.1算术运算符<br>算术运算符:+(加)、-(减)、<em>(乘)、/(除)、%(求余)、//(整除)、**(幂运算)<br> +、-、</em>、/、%和数学里面相应的运算时一模一样的<br>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(12+10.0)  #22.0</span><br><span class="line">print(100-8)	#92</span><br><span class="line">print(10*7)		#70</span><br><span class="line">print(5/2)		#2.5</span><br><span class="line">print(10%4)		#2</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">22.0</span><br><span class="line">92</span><br><span class="line">70</span><br><span class="line">2.5</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<p>// (整除)：可以对浮点数做整除的操作，只是结果只保留整数的部分(直接去掉小数部分)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(10.0//3)	 #3.0</span><br><span class="line">print(16/10)     #1.6</span><br><span class="line">print(16//10.0)  #1.0</span><br><span class="line">print(10//4)	 #2</span><br><span class="line">** 计算次方</span><br><span class="line">#print(2**3)   #计算2的3次方</span><br></pre></td></tr></table></figure>
+<p>练习：获取n的各位数、十位数和百位数(要求n,大于100)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">n = 7896</span><br><span class="line">取个位数: (对10取余)</span><br><span class="line">print(&apos;个数:&apos;,n%10)</span><br><span class="line">十位数：</span><br><span class="line">print(&apos;十位数:&apos;,n//10%10)</span><br><span class="line">print(&apos;十位数:&apos;,n%100//10)</span><br><span class="line">百位数:</span><br><span class="line">print(&apos;百位数:&apos;,n//100%10)</span><br><span class="line">print(&apos;百位数:&apos;,n%1000//100)</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">个数: 4</span><br><span class="line">十位数: 8</span><br><span class="line">十位数: 8</span><br><span class="line">百位数: 7</span><br><span class="line">百位数: 7</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

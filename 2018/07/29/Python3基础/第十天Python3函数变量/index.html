@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="#Python3 函数（下）
+8 函数的变量def 函数名(参数列表):    函数体我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。普通变量能做的事情，函数变量都能做
+
+函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。
+可以用一个变量给另" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:32:34.517Z"><a href="/2018/07/29/Python3基础/第十天Python3函数变量/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>#Python3 函数（下）</p>
+<h2 id="8-函数的变量"><a href="#8-函数的变量" class="headerlink" title="8 函数的变量"></a>8 函数的变量</h2><p>def 函数名(参数列表):<br>    函数体<br>我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。<br>普通变量能做的事情，函数变量都能做</p>
+<ol>
+<li>函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。</li>
+<li>可以用一个变量给另外一个变量赋值。</li>
+<li>函数变量作为函数的参数。</li>
+<li>函数作为返回值。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> 1. 函数名就是函数类型变量（类型名:function）,存的是函数入口的地址</span><br><span class="line">def func1():</span><br><span class="line">    print(&apos;aaa&apos;)</span><br><span class="line">print(type(func1))  # &lt;class &apos;function&apos;&gt;</span><br><span class="line">num = 10</span><br><span class="line">print(type(num))  # &lt;class &apos;int&apos;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">2. 可以用一个变量给另外一个变量赋值</span><br><span class="line"># a = func1()   # 这样赋值，是将函数func1的返回值赋给a</span><br><span class="line">a = func1  # 将函数变量func1赋给a, a就会变成一个函数</span><br><span class="line">a()  # 现在就可以用函数变量a,去调用函数func1</span><br><span class="line">def func2(num):</span><br><span class="line">    return num*2</span><br><span class="line">b = func2</span><br><span class="line">print(func2(10))</span><br><span class="line">print(b(20))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">3. 函数变量作为函数的参数</span><br><span class="line">def calculate(num1, num2, fn):</span><br><span class="line">    # num1 = 10  num2 = 20  fn = func_add</span><br><span class="line">    # 如果num1不是int或者float数据</span><br><span class="line">    if not (isinstance(num1, int) or isinstance(num1, float)):</span><br><span class="line">        print(&apos;num1不是数字&apos;)</span><br><span class="line">        return None  # 在这儿让函数直接结束</span><br><span class="line">    if not (isinstance(num2, int) or isinstance(num2, float)):</span><br><span class="line">        print(&apos;num2不是数字&apos;)</span><br><span class="line">        return None  # 在这儿让函数直接结束</span><br><span class="line">    return fn(num1, num2)  # return func_add(10, 20)  return 30</span><br><span class="line">def func_add(m, n):</span><br><span class="line">    # m = 10  n = 20</span><br><span class="line">    return m + n  # return 30</span><br><span class="line">def func_sub(m, n):</span><br><span class="line">    return m - n</span><br><span class="line">result = calculate(10, 20, func_add)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">4. 函数作为返回值</span><br><span class="line"># 写一个函数，func3(&apos;+&apos;) -&gt;  返回求和的功能；func3(&apos;*&apos;)-&gt; 返回求乘积的功能</span><br><span class="line">def func3(char):</span><br><span class="line">    if char == &apos;+&apos;:</span><br><span class="line">        # python中，是可以在函数中声明函数</span><br><span class="line">        def fn(*nums):</span><br><span class="line">            sum1 = 0</span><br><span class="line">            for x in nums:</span><br><span class="line">                sum1 += x</span><br><span class="line">            return sum1</span><br><span class="line">        return fn</span><br><span class="line">    if char == &apos;*&apos;:</span><br><span class="line">        def fn(*nums):</span><br><span class="line">            sum1 = 1</span><br><span class="line">            for x in nums:</span><br><span class="line">                sum1 *= x</span><br><span class="line">            return sum1</span><br><span class="line">        return fn</span><br><span class="line">result = func3(&apos;+&apos;)  # reslut是一个求和功能的函数的函数变量</span><br><span class="line">print(&apos;aaa&apos;, result(1, 2, 3, 4))</span><br><span class="line">result2 = func3(&apos;*&apos;)(10, 20)</span><br><span class="line">print(result2)</span><br><span class="line"># 列表作为返回（对象变量作为返回值）</span><br><span class="line">def func4():</span><br><span class="line">    list1 = [1, 2, 3]</span><br><span class="line">    return list1</span><br><span class="line">result = func4()</span><br><span class="line">print(result)</span><br><span class="line">print(func4()[0])</span><br></pre></td></tr></table></figure>
+<h2 id="9-匿名函数"><a href="#9-匿名函数" class="headerlink" title="9 匿名函数"></a>9 匿名函数</h2><p>python中使用lambda关键字来声明一个匿名函数<br>格式： lambda 参数列表:返回值<br>参数列表: 多个参数之间用逗号隔开  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 使用函数实现求两个数的和</span><br><span class="line">def func1(num1, num2):</span><br><span class="line">    return num1 + num2</span><br><span class="line">print(func1(10, 20))</span><br><span class="line"># 使用匿名函数实现求两个数的和</span><br><span class="line">func2 = lambda num1, num2: num1 + num2</span><br><span class="line">print(func2(10, 20))</span><br><span class="line"># 练习：使用匿名函数求指定列表中，指定的两个下标对应的元素的和</span><br><span class="line">func3 = lambda list1, index1, index2: list1[index1]+list1[index2]</span><br><span class="line">print(func3([11, 4, 8, 9, 20], 0, 2))</span><br></pre></td></tr></table></figure>
+<p>使用指定的功能区计算num1和num2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def calculate（num1, num2, fn）:</span><br><span class="line">	return fu(num1, num2)</span><br><span class="line">sum1 = calculate(10,20,lambda a,b: a-b)</span><br><span class="line">print(sum1)</span><br></pre></td></tr></table></figure>
+<h2 id="9-递归函数"><a href="#9-递归函数" class="headerlink" title="9 递归函数"></a>9 递归函数</h2><p>1.在函数的声明中调用函数本身</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def func1():</span><br><span class="line">    print(&apos;aaa&apos;)</span><br><span class="line">    func1()</span><br><span class="line">func1()  #死循环</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>递归作用：理论上循环能够做到的事情递归都可以做（但实际除非是非用不可的情况，一般不用递归）</li>
+<li>写递归的步骤：<br> a.确定临界值（结束函数的时刻）<br> b.假设函数的功能已经实现，然后找到f(n)和f(n-1)关系<br> c.使用f(n-1)与f(n)的关系去实现f(n)的功能</li>
+</ol>
+<p>练习：计算 1+2+3+4+……+n</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">方法1：使用循环</span><br><span class="line">def func1(n):</span><br><span class="line">    sum1=0</span><br><span class="line">    for x in range(1,n+1):</span><br><span class="line">        sum1 += x</span><br><span class="line">    return sum1</span><br><span class="line"></span><br><span class="line"># 方法2：使用递归</span><br><span class="line">def func2(n):</span><br><span class="line">    # 1.确定临界值</span><br><span class="line">    if n ==1:</span><br><span class="line">        return 1</span><br><span class="line">    # 2.假设func2功能实现了，找到func2(n-1),func2(n)的关系</span><br><span class="line">    # func2（n-1）  = 1+2+3+……+n-1</span><br><span class="line">    # func2(n)     =  1+2+3+……+n-1 + n  = func2(n-1) +n</span><br><span class="line">    # 3.通过func2(n-1)去实现func2(n)功能</span><br><span class="line">    return func2(n-1)+n</span><br><span class="line">print(func2(100))</span><br></pre></td></tr></table></figure>
+<p>用递归实现:2  <em> 4  </em>  6  <em> … </em> n(要求n是偶数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def func3(n):</span><br><span class="line">    if n % 2 != 0:</span><br><span class="line">        print(&apos;n必须是偶数&apos;)</span><br><span class="line">        return None（这里的作用是结束）</span><br><span class="line">    # 1.确定临界值</span><br><span class="line">    if n == 2:</span><br><span class="line">        return 2</span><br><span class="line">    # 2.找规律</span><br><span class="line">    # f(n) = 2 * 4 * 6*...*n-2*n</span><br><span class="line">    # f(n-2) = 2 * 4 * 6*...* n-2</span><br><span class="line">    # f(n) = f(n-2)*n</span><br><span class="line">    return func3(n-2)*n</span><br><span class="line">print(func3(6))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">当n = 5时 打印如下</span><br><span class="line">*****  0  5个*</span><br><span class="line">****   1  4个*</span><br><span class="line">***    2  3个*</span><br><span class="line">**     3  2个*</span><br><span class="line">*      4  1个*</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">方法1：使用循环</span><br><span class="line">def print_star(n):</span><br><span class="line">    # x = (0,1,2,3,4)</span><br><span class="line">    for x in range(n):</span><br><span class="line">        print(&apos;*&apos;*(n-x))</span><br><span class="line">print_star(5)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 方法2：使用递归</span><br><span class="line">def print_star2(n):</span><br><span class="line">    # 1. 确定临界值(一定要让函数结束)</span><br><span class="line">    if n == 1:</span><br><span class="line">        print(&apos;*&apos;)</span><br><span class="line">        return None</span><br><span class="line">    # 2. 找关系f(n)和f(n-1)</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    n = 5 ,打印:     n=5-1，打印：</span><br><span class="line">    *****            </span><br><span class="line">    ****             ****</span><br><span class="line">    ***              ***</span><br><span class="line">    **               **</span><br><span class="line">    *                *</span><br><span class="line">    f(n)和f(n-1)关系：打印一行n个*,在执行f(n-1)</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    print(&apos;*&apos;*n)</span><br><span class="line">    print_star2(n-1)</span><br><span class="line">print_star2(4)</span><br></pre></td></tr></table></figure>
+<h2 id="10-函数的调用过程"><a href="#10-函数的调用过程" class="headerlink" title="10 函数的调用过程"></a>10 函数的调用过程</h2><p>函数在调用的过程就是一个压栈的过程：</p>
+<p>a.调用函数的时候，首先会在栈中开辟一块内存空间，<br>用来保存函数调用过程中产生的数据(包括函数的参数和在函数中声明的变量)<br>b.当函数执行完成后，被调用函数对应的内存空间会被回收(释放)</p>
+<p>栈：是内存中的一块特殊的区域。数字和字符串的值是存在栈里面的<br>堆：对象是存在堆里面的</p>
+<p>总结: 递归要慎用！（能用循环做的，就不要用递归。递归消耗内存也消耗CPU资源）</p>
+<h2 id="11-使用模块管理函数"><a href="#11-使用模块管理函数" class="headerlink" title="11 使用模块管理函数"></a>11 使用模块管理函数</h2><p>模块就是指一个.py文件（一个.py文件就是一个模块）<br>可以在一个模块中使用其他模块的函数和类</p>
+<p>怎么使用其他模块中的函数？</p>
+<ol>
+<li>通过import关键字导入模块，然后通过 模块名.函数 的方法去使用模块中的函数<br>注意: 当我们导入其他的模块的时候，会将其他模块中的所有的内容都会导入到当前文件中</li>
+<li>通过from-import直接导入指定的函数。导入后就可以直接调用函数<br>格式: from 模块名 import 函数名1, 函数名2</li>
+<li>通过 as关键字给导入模块或者函数重命名</li>
+</ol>
+<p>关于<strong>name</strong>属性:<br><strong> name </strong>是每个模块都有的属性，作用是用来存储模块的名字。<br>当模块不是正在执行的模块， <strong> name </strong>属性的值是模块对应的文件的文件名；<br>当模块正在执行的时候，<strong> name </strong> 的值就是一个固定值 ‘<strong> main </strong>‘</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

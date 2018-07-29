@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="Python3 函数（中）##7.函数的返回值函数的返回值：1.就是函数调用表达式的值：2.就是return关键字后的表达式的值：3.就是函数返回4.如何看一个函数的返回值是多少：就看retrun后面的结果！！，如果没有return就是None
+##7.1 函数的调用表达式函数的调用表达式：就是调用" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:31:35.394Z"><a href="/2018/07/29/Python3基础/第九天Python3函数/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Python3-函数（中）"><a href="#Python3-函数（中）" class="headerlink" title="Python3 函数（中）"></a>Python3 函数（中）</h1><p>##7.函数的返回值<br>函数的返回值：<br>1.就是函数调用表达式的值：<br>2.就是return关键字后的表达式的值：<br>3.就是函数返回<br>4.如何看一个函数的返回值是多少：就看retrun后面的结果！！，如果没有return就是None</p>
+<p>##7.1 函数的调用表达式<br>函数的调用表达式：就是调用函数的哪个表达式（这个表达式是有值的，默认None）<br>func1就是一个函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def func1();</span><br><span class="line">	print(&apos;hello world&apos;)</span><br><span class="line">func1()</span><br></pre></td></tr></table></figure></p>
+<p>func1()就是函数调用表达式，他是一个值。<br>普通的值能做的事情，函数调用表达式都能做；例如:给变量赋值，打印(可以作为实参传给函数)，运算等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def func1():</span><br><span class="line">    print(&apos;he</span><br><span class="line">result = func1()</span><br><span class="line">print(result, func1())</span><br></pre></td></tr></table></figure></p>
+<p>##7.2 函数的return语句<br>return [表达式]<br>作用：1.将值传给函数调用者(函数调用表达式)  2.结束函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def func2():</span><br><span class="line">    print(&apos;hello world&apos;)</span><br><span class="line">    # return None</span><br><span class="line">    return &apos;aaa</span><br><span class="line">result = func2() * 2</span><br><span class="line">print(result, func2())</span><br></pre></td></tr></table></figure></p>
+<p>如果函数中没有return, 就相当于在函数结束的时候后面加了一个return None<br>练习：写一个函数，获取两个数乘积<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def qf_multiply(num1, num2):</span><br><span class="line">    return num1 * num2</span><br><span class="line">result = qf_multiply(10, 3)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>##7.3 函数的结束<br>a.没有return,函数体执行完毕，函数结束<br>b.如果函数中有return，遇到return函数就结束。程序直接回到函数调用位置，接着往下执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def func3():</span><br><span class="line">    print(&apos;hello&apos;)</span><br><span class="line">    return 10</span><br><span class="line">    print(&apos;world&apos;)</span><br><span class="line">print(func3())</span><br></pre></td></tr></table></figure></p>
+<p>练习: 写一个函数，找出100-200之间第一个能被13整除的数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def qf_find_num():</span><br><span class="line">    for x in range(100, 201):</span><br><span class="line">        if x % 13 == 0:</span><br><span class="line">            return x</span><br><span class="line">print(qf_find_num())</span><br></pre></td></tr></table></figure></p>
+<p>##7.4 参数<br>以下是调用函数时可使用的正式参数类型：</p>
+<ul>
+<li>必需参数</li>
+<li>关键字参数</li>
+<li>默认参数</li>
+<li>不定长参数<br>1.必需参数<br>必需参数须以正确的顺序传入函数。调用时的数量必须和声明时的一样。<br>调用printme()函数，你必须传入一个参数，不然会出现语法错误<br>2.关键字参数<br>关键字参数和函数调用关系紧密，函数调用使用关键字参数来确定传入的参数值。<br>使用关键字参数允许函数调用时参数的顺序与声明时不一致，因为 Python 解释器能够用参数名匹配参数值。<br>3.默认参数<br>调用函数时，如果没有传递参数，则会使用默认参数。<br>4.不定长参数<br>你可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，和上述 2 种参数不同，声明时不会命名。<br>##7.5 将列表作为参数<br>练习： 写一个函数，删除指定列表中的偶数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># [1,2,3,4]</span><br><span class="line"># index = 0</span><br><span class="line"># index = 1  [1,3,4]   index = 0</span><br><span class="line"># index = 1</span><br><span class="line"># index = 2  [1, 3]   index = 1</span><br><span class="line"># index = 2  结束</span><br><span class="line"></span><br><span class="line">def del_list(list1):</span><br><span class="line">    index = 0</span><br><span class="line">    while index &lt; len(list1):</span><br><span class="line">        if list1[index] % 2 == 0:</span><br><span class="line">            del list1[index]</span><br><span class="line">            index -= 1</span><br><span class="line">        index += 1</span><br><span class="line">    print(list1)</span><br><span class="line">list2 = [1, 2, 3, 4]</span><br><span class="line">del_list(list2)</span><br><span class="line"># 注意，将列表变量作为实参传递给函数，如果在函数中改变了列表的元素，那么原来列表元素也会改变</span><br><span class="line">print(list2)</span><br><span class="line">list2 = [1, 2, 3, 4]</span><br><span class="line">del_list(list2[:])</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1, 3]</span><br><span class="line">[1, 3]</span><br><span class="line">[1, 3]</span><br><span class="line">[1, 2, 3, 4]</span><br></pre></td></tr></table></figure></p>
+<p>##7.6变量作用域<br>Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。<br>变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。<br>python中只有函数和类会产生作用域。<br>在作用域中声明的变量我们叫局部变量<br>在产生作用域外的位置声明的变量叫全局变量<br>不管是局部变量还是全局变量，都是从声明开始起作用的</p>
+<p>##7.6.1 全局变量和局部变量<br>1.全局变量<br>声明在产生作用域外.<br>使用范围是:从声明开始到整个文件结束的任何位置都可以使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = 10</span><br><span class="line">print(a)</span><br><span class="line">if True:</span><br><span class="line">    print(&apos;if&apos;, a)</span><br><span class="line">for x in range(3):</span><br><span class="line">    print(&apos;for&apos;, a)</span><br><span class="line">def func1():</span><br><span class="line">    print(&apos;func1&apos;, a)</span><br><span class="line">func1()</span><br></pre></td></tr></table></figure></p>
+<p>if语句、for/while循环体，是不会产生作用域的；相当于写在if、循环体中的变量不改变其变量属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">if True:</span><br><span class="line">    b = 20   # 在这儿的b也是全局变量</span><br><span class="line">    print(&apos;if&apos;, b)</span><br><span class="line">print(b)</span><br><span class="line">while True:</span><br><span class="line">    c = 30  # 全局变量</span><br><span class="line">    print(&apos;while&apos;, b, c)</span><br><span class="line">    break</span><br><span class="line">def func2():</span><br><span class="line">    print(&apos;func2&apos;, b, c)</span><br><span class="line">func2()</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure></p>
+<p>2.局部变量：在python中声明在函数和类的变量都是局部变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def func3():</span><br><span class="line">    # d就是一个局部变量，使用范围从声明开始到函数结束</span><br><span class="line">    d = &apos;a&apos;</span><br><span class="line">    print(&apos;func3&apos;, d)</span><br><span class="line">    if True:</span><br><span class="line">        print(d)</span><br><span class="line">func3()</span><br></pre></td></tr></table></figure></p>
+<p>注意: 在函数中不能修改全局变量的值，只能使用</p>
+<ol start="3">
+<li>global关键字的使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bb = 100</span><br><span class="line">def func5():</span><br><span class="line">    # 想在这个地方去修改全局变量bb的值为200</span><br><span class="line">    global bb</span><br><span class="line">    bb = 200</span><br><span class="line">    cc = 10</span><br><span class="line">func5()</span><br><span class="line">print(bb)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

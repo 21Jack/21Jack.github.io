@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="[TOC]
+#1.list 列表python中的数据类型:数字(不可变)、字符串(不可变)、列表(可变)、元祖(不可变)、字典(可变)、集合(不可变)容器类型的数据: 列表(list)、元祖、字典、集合 (序列)列表（数组）：一个列表中可以存储多个不同类型的数据。列表存储数据的方式：将多个数据放到一" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:31:58.699Z"><a href="/2018/07/29/Python3基础/第六天Python3基本语法List/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[TOC]</p>
+<p>#1.list 列表<br>python中的数据类型:数字(不可变)、字符串(不可变)、列表(可变)、元祖(不可变)、字典(可变)、集合(不可变)<br>容器类型的数据: 列表(list)、元祖、字典、集合 (序列)<br>列表（数组）：一个列表中可以存储多个不同类型的数据。<br>列表存储数据的方式：将多个数据放到一个 “[]” 中，多个数据之间用逗号隔开。<br>列表的特点：列表的是可变的（指的是列表中元素的值和个数可变）<br>“[]”: 是列表的标志</p>
+<p>##1.1声明一个列表<br>声明一个列表list1,里面有5个元素，分别是 1， 2， 3， 10.9，‘abc’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 10.9, &apos;abc&apos;]</span><br><span class="line">	pint(list1)</span><br></pre></td></tr></table></figure>
+<p>执行代码结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3, 10.9, &apos;abc&apos;]</span><br></pre></td></tr></table></figure>
+<p>还可以声明一个空的列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lists = []</span><br><span class="line">print(lists)</span><br></pre></td></tr></table></figure>
+<p>执行代码结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br></pre></td></tr></table></figure>
+<p>##1.2获取列表中的元素<br>方法1：获取单个元素（通过元素对应的下标）。<br>下标的取值范围：正取：0 ~ （len(list)-1）/（元素个数-1）； 反取：-1 ~ （len(list)-1）/-元素个数。<br>注意：通过下标获取元素的时候，下标不能越界。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 10.9, &apos;abc&apos;]</span><br><span class="line">print(list1[0])   # 获取下标是0的元素</span><br><span class="line">print(list1[3])   # 获取下标是3的元素</span><br><span class="line">print(list1[-1])  # 获取最后一个元素</span><br><span class="line">print(list1[-2])  # 获取倒数第二个元素</span><br><span class="line">print(list1[5])   #IndexError: list index out of range</span><br><span class="line">print(list1[-6])  #IndexError: list index out of range</span><br></pre></td></tr></table></figure></p>
+<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">10.9</span><br><span class="line">abc</span><br><span class="line">10.9</span><br><span class="line">IndexError: list index out of range</span><br></pre></td></tr></table></figure></p>
+<p>方法2：获取列表中的部分元素（通过元素对应的下标）。<br>列表名[开始下标：结束下标]<br>获取到的是从开始下标到结束下标前的所有的元素，组成的列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list3 = [2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">print(list3[1:4])  # 获取下标为1开始到下标3的所有的元素</span><br><span class="line">print(list3[:4])   # 获取从第一个元素开始到下标为3的所有元素</span><br><span class="line">print(list3[2:])   # 获取下标为2开始到列表最后的所有元素</span><br><span class="line">print(list3[:])    # 获取列表开始到结束的所有元素</span><br></pre></td></tr></table></figure></p>
+<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[10.5, &apos;a&apos;, &apos;abc&apos;]</span><br><span class="line">[2, 10.5, &apos;a&apos;, &apos;abc&apos;]</span><br><span class="line">[&apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">[2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br></pre></td></tr></table></figure></p>
+<p>列表名[开始下标:结束下标:步长]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(list3[0:4:2])  # 从下标为0开始到下标为3，每2个元素取一个</span><br></pre></td></tr></table></figure>
+<p>执行代码结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, &apos;a&apos;]</span><br></pre></td></tr></table></figure>
+<p>获取列表中所有下标是偶数的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list3 = [2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">print(list3[::2])</span><br></pre></td></tr></table></figure>
+<p>执行代码结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, &apos;a&apos;, 10]</span><br></pre></td></tr></table></figure>
+<p>##1.3 遍历列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">for item in list4:</span><br><span class="line">    if item % 2 == 0:</span><br><span class="line">        print(item，end=&apos; &apos;)</span><br></pre></td></tr></table></figure></p>
+<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">34 6 2 8 4</span><br></pre></td></tr></table></figure></p>
+<p>计算列表中所有元素的和<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">sum1 = 0</span><br><span class="line">for item in list4:</span><br><span class="line">    sum1 += item</span><br><span class="line">print(sum1)</span><br></pre></td></tr></table></figure></p>
+<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l46</span><br></pre></td></tr></table></figure></p>
+<p>获取下标是奇数的元素<br>方法1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">i = 1</span><br><span class="line">while i &lt; len(list4):</span><br><span class="line">    print(list4[i])</span><br><span class="line">    i += 2</span><br></pre></td></tr></table></figure>
+<p>执行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">34</span><br><span class="line">2</span><br><span class="line">91</span><br></pre></td></tr></table></figure>
+<p>方法2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">i = 0</span><br><span class="line">while i &lt; len(list4):</span><br><span class="line">    if i % 2 == 0:</span><br><span class="line">        i += 1</span><br><span class="line">        continue</span><br><span class="line">    print(list4[i])</span><br><span class="line">    i += 1</span><br></pre></td></tr></table></figure>
+<p>执行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">34</span><br><span class="line">2</span><br><span class="line">91</span><br></pre></td></tr></table></figure>
+<p>##1.4 列表的元素添加<br>在一个空的列表中添加新的元素</p>
+<p>###1.4.1 append（）<br>append方法： 列表名.append(元素)<br>特点：append是将元素添加到列表的最后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个空列表</span><br><span class="line">list1 = []</span><br><span class="line">print(list1)</span><br><span class="line">list1.append(&apos;abc&apos;)</span><br><span class="line">print(list1)</span><br><span class="line">list1.append(10)</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br><span class="line">[&apos;abc&apos;]</span><br><span class="line">[&apos;abc&apos;, 10]</span><br></pre></td></tr></table></figure></p>
+<p>练习:找出列表中[1,34,5,6,89,3,2,4]所有的偶数,并且保存起来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list2 = []</span><br><span class="line">for item in [1,34,5,6,89,3,2,4]:</span><br><span class="line">	if item % 2 == 0:</span><br><span class="line">		list2.append(item)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[34, 6, 2, 4]</span><br></pre></td></tr></table></figure></p>
+<p>###1.4.2 insert（）<br>insert:  列表名.insert(下标，元素)。<br>在指定的下标元素前插入指定的元素。<br>注意：这里的下标可以越界（下标范围） 只不过值插入到了列表的末尾。但是取反范围（-1 ~ -len（list））就会报错：IndexError: list index out of range。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(1,&apos;a&apos;)</span><br><span class="line">print(list3)</span><br><span class="line"># 通过insert在4和5之间插入元素&apos;b&apos;;再在8的后面插入元素&apos;c&apos;</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(4, &apos;b&apos;)</span><br><span class="line">print(list3)</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(10, &apos;c&apos;)    # 当下标大于等于列表的长度，会插入到列表的最后</span><br><span class="line">print(list3)</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(0, &apos;d&apos;)    # 在列表的最前面插入一个元素</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1, &apos;a&apos;, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">[1, 2, 3, 4, &apos;b&apos;, 5, 6, 7, 8]</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7, 8, &apos;c&apos;]</span><br><span class="line">[&apos;d&apos;, 1, 2, 3, 4, 5, 6, 7, 8]</span><br></pre></td></tr></table></figure></p>
+<p>##1.5 列表的修改<br>修改元素: 通过下标拿到对应的元素，然后重新赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5]</span><br><span class="line">list1[1] = 20  # 将下标是1的元素变成20</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 20, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
+<p>让列表中的所有元素变为原来的2倍<br>通过下标来确定列表中的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5]</span><br><span class="line">for x in range(0, len(list1)):</span><br><span class="line">    list1[x] = list1[x] * 2</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, 4, 6, 8, 10]</span><br></pre></td></tr></table></figure></p>
+<p>让列表中偶数位上的元素变为原来的2倍</p>
+<p>##1.6 列表的删除<br>删除元素</p>
+<p>##1.6.1 del<br>del语句: 在python中，del可以删除任何内容<br>del语句删除列表元素: del 列表名[下标]<br>删除下标为1的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1 = &apos;Hello&apos;</span><br><span class="line">list1 = [&apos;a&apos;, str1, 10+20, &apos;b&apos;, True]</span><br><span class="line">print(list1)</span><br><span class="line">del list1[1]</span><br><span class="line">print(list1)</span><br><span class="line"># del list1[20]  # IndexError: list assignment index out of range</span><br></pre></td></tr></table></figure></p>
+<p>注意：这儿的下标不能越界<br>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;Hello&apos;, 30, &apos;b&apos;, True]</span><br><span class="line">[&apos;a&apos;, 30, &apos;b&apos;, True]</span><br></pre></td></tr></table></figure></p>
+<p>练习:删除列表中所有的偶数<br>通过下标删除要注意下标的重新分配的问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list2 = [6, 2, 3, 5, 10, 6, 7, 8]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list2):</span><br><span class="line">    if list2[index] % 2 == 0:</span><br><span class="line">        del list2[index]</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, 5, 7]</span><br></pre></td></tr></table></figure></p>
+<h3 id="isinstance-判断变量类型"><a href="#isinstance-判断变量类型" class="headerlink" title="isinstance 判断变量类型"></a>isinstance 判断变量类型</h3><p>isinstance(变量,类型):判断指定变量/值是否是指定的类型。返回值：bool类型<br>str(字符串)、int(整型)、float(浮点型)、bool(布尔)、list(列表)、tuple(元祖)、dict(字典)、set(集合)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = isinstance(&apos;aa&apos;, str)  # 获取&apos;aa&apos;是否是字符串</span><br><span class="line">print(re)</span><br></pre></td></tr></table></figure></p>
+<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure></p>
+<p>删除列表中的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list3 = [&apos;a&apos;, 1, 20, &apos;pp&apos;, 19.3, &apos;ohk&apos;]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list3):</span><br><span class="line">    if isinstance(list3[index], str):</span><br><span class="line">        del list3[index]</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
+<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 20, 19.3]</span><br></pre></td></tr></table></figure></p>
+<p>##1.6.2 通过remove方法删除指定元素<br>remove（）删除指定元素<br>格式: 列表名.remove(元素)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list4 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, 3]</span><br><span class="line">list4.remove(&apos;c&apos;)</span><br><span class="line">print(list4)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;b&apos;, 1, 2, 3]</span><br></pre></td></tr></table></figure></p>
+<p>使用remove删除列表元素的时候，如果指定的元素在列表中有多个，只删除第一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list4 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, &apos;c&apos;]</span><br><span class="line">list4.remove(&apos;c&apos;)</span><br><span class="line">print(list4)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;b&apos;, 1, 2, 3]</span><br></pre></td></tr></table></figure></p>
+<p>删除列表[1,3,4,7,8,2,3,4,1] 中所有的奇数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">list5 = [1, 3, 4, 7, 8, 2, 3, 4, 1]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list5):</span><br><span class="line">    value = list5[index]</span><br><span class="line">    if value % 2 != 0:</span><br><span class="line">        list5.remove(value)</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list5)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[4, 8, 2, 4]</span><br></pre></td></tr></table></figure></p>
+<p>##1.6.3 使用pop()方法删除指定下标的元素<br>格式1: 列表名.pop(下标)  从列表中取出指定下标对应的元素<br>格式2: 列表名.pop()  从列表中取出最后一个元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list6 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">delitem = list6.pop(1)  # 将下标是1的元素从list6中取出，并且存到变量delitem中</span><br><span class="line">print(delitem, list6)</span><br><span class="line"></span><br><span class="line">del_item2 = list6.pop()</span><br><span class="line">print(del_item2, list6)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 [1, 3, 4, 5, 6]</span><br><span class="line">6 [1, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
+<p>将一个列表[1,2,3,4,5,6]中的元素全部取出放到另外一个列表里面变成[6,5,4,3,2,1]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">list2 = []</span><br><span class="line">while len(list1) &gt; 0:</span><br><span class="line">    #从前往后取</span><br><span class="line">    value = list1.pop(0)#移除list1[0]=1 列表list1 =[2, 3, 4, 5, 6] 在循环里就是重复去列表的下标为0的元素 并赋值</span><br><span class="line">    list2.insert(0, value)#插入到下标为0的元素之前 </span><br><span class="line"></span><br><span class="line">    #从后往前取</span><br><span class="line">    value = list1.pop()</span><br><span class="line">    list2.append(value)</span><br><span class="line"></span><br><span class="line">print(list1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br><span class="line">[6, 5, 4, 3, 2, 1]</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-列表的基本操作"><a href="#2-列表的基本操作" class="headerlink" title="2 列表的基本操作"></a>2 列表的基本操作</h1><p>1.求列表长度：len()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">length = len(list1)</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
+<p>2.列表的 + 操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 列表1 + 列表2 ： 将列表2和列表2中的元素，组合成一个新的列表：</span><br><span class="line">list2 = [1, 2, 3, 4] + [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
+<p>3.列表的 * 操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list3 = [10, 2]*4</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
+<p>4.in 和 not in<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 元素 in 列表 ：  判断指定的元素是否在指定的列表中</span><br><span class="line">list4 = [&apos;abc&apos;, &apos;123&apos;, 1, &apos;04&apos;, 10]</span><br><span class="line">re = &apos;abc&apos; in list4</span><br><span class="line">re2 = &apos;ab&apos; in list4</span><br><span class="line">print(re, re2)</span><br><span class="line"># 元素 not in 列表 ：  判断指定的元素是否不在指定的列表中</span><br><span class="line">list4 = [&apos;abc&apos;, &apos;123&apos;, 1, &apos;04&apos;, 10]</span><br><span class="line">re2 = &apos;ab&apos; not in list4</span><br><span class="line">print(re2)</span><br></pre></td></tr></table></figure></p>
+<p>5.获取列表中的最大值<br>格式：max()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2 = [1, 2, 3, 4]</span><br><span class="line">max(list2)</span><br></pre></td></tr></table></figure></p>
+<p>6.获取列表中的最大值</p>
+<p>格式：min()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]</span><br><span class="line">min(list2)</span><br></pre></td></tr></table></figure>
+<p>练习：求表演的平均数（10/5个裁判，给表演打分，去掉一个最高分，一个最低分，求最后的平均分数）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import  math</span><br><span class="line"># 随机产生 5 个分数</span><br><span class="line">scores = []</span><br><span class="line">for _ in range(5):</span><br><span class="line">    value = random.randint(1, 10)</span><br><span class="line">    scores.append(value)</span><br><span class="line">print(scores)</span><br><span class="line"># 去掉 最高 和最低 分</span><br><span class="line">max1 = max(scores)</span><br><span class="line">min1 = min(scores)</span><br><span class="line">scores.remove(max1)</span><br><span class="line">scores.remove(min1)</span><br><span class="line"># 计算平均数</span><br><span class="line"># sum（列表）：计算列表中所有的元素的和</span><br><span class="line">print(sum(scores)/len(scores))</span><br></pre></td></tr></table></figure>
+<p>执行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[6, 2, 2, 6, 3]</span><br><span class="line">3.6666666666666665</span><br></pre></td></tr></table></figure>
+<p>7.将其他的数据装换列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 6.将其他的数据装换列表</span><br><span class="line"># 格式： list（数据）</span><br><span class="line">list1 = list(&apos;abcdef&apos;)</span><br><span class="line">print(list1)</span><br><span class="line"># 将范围（range）转换成列表</span><br><span class="line">list1 = list(range(10))</span><br><span class="line">print(list1)</span><br><span class="line"># 将 （不是仅仅将列表的元素凭借成字符串的，而是将整个列表所有的结构都张欢成字符串结构）</span><br><span class="line">str1 = str([1, 2, 3, 4, 5, &apos;a&apos;])</span><br><span class="line">print(str1)</span><br></pre></td></tr></table></figure>
+<p>执行代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="line">[1, 2, 3, 4, 5, &apos;a&apos;]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

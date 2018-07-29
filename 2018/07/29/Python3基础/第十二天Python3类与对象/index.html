@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="面向对象编程先理解几个编程思想：
+1.面向过程编程： 如C  （只有逻辑个过程 –&amp;gt;遇到问题解决问题）
+1234#实现两个数相加：a = 1 b = 2print(a + b)
+ 2.面向对象编程：java , C ++ , oc ，python 等（有类的语法）–&amp;gt;（以对象为工具实现功" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:32:16.728Z"><a href="/2018/07/29/Python3基础/第十二天Python3类与对象/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p>先理解几个编程思想：</p>
+<p>1.面向过程编程： 如C  （只有逻辑个过程 –&gt;遇到问题解决问题）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#实现两个数相加：</span><br><span class="line">a = 1 </span><br><span class="line">b = 2</span><br><span class="line">print(a + b)</span><br></pre></td></tr></table></figure>
+<p> 2.面向对象编程：java , C ++ , oc ，python 等（有类的语法）–&gt;（以对象为工具实现功能）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象.sum(1,2)#实现两个数字相加</span><br></pre></td></tr></table></figure>
+<p>3.函数式编程：C 、Java、Python （以函数为工具实现功能）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sum(num1,num2)</span><br><span class="line">	return num1+num2</span><br><span class="line">sum(1,2)</span><br></pre></td></tr></table></figure>
+<h1 id="类、对象"><a href="#类、对象" class="headerlink" title="类、对象"></a>类、对象</h1><p>类：具有相同属性的和相同功能的对象集合，是抽象的  </p>
+<p>对象：就是类的实例，是具体的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]</span><br><span class="line">如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]</span><br></pre></td></tr></table></figure>
+<p>类的声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">声明类的格式：</span><br><span class="line">class	类名：</span><br><span class="line">	类的内容&#123;1.类变量 2.对象属性 3.方法（构造方法、对象方法、类方法、静态方法）&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>class : python中声明类的关键字</li>
+<li>类名：标识符，1.首字母大写！！！   2.见名知义</li>
+<li>冒号：固定格式 </li>
+<li><p>类的内容：冒号后一个缩进的内容，就是类的内容</p>
+</li>
+<li><p>类的内容：又包含</p>
+<ul>
+<li>1.类变量：声明在类中、方法之外的变量；要通过类去捕获（通过类能够让其具体的属性）</li>
+<li>2.对象属性：对象属性是指定义在方法的内部的属性 </li>
+<li><p>3.方法：声明在类中的函数就叫方法</p>
+<ul>
+<li><p>对象方法：1.所有的对象方法都有一个默认的参数self</p>
+<p>​                     self:</p>
+<pre><code>1.用来指向调用方法的对象(谁调用当前这个方法就指向谁)
+2.调用带有self的方法，不需要给self传参，系统会自动将方法调用者传给它
+</code></pre><p>​                   2.直接声明在类中的函数，都是对象方法</p>
+<pre><code>3.对象方法必须使用对象去调用
+</code></pre></li>
+<li><p>类方法</p>
+</li>
+<li><p>静态方法</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 声明一个人对应的类</span><br><span class="line">class Person:</span><br><span class="line">    # count就是类变量（通过类去使用）</span><br><span class="line">    count = 61  # 局部变量，作用域是整个类</span><br><span class="line"></span><br><span class="line">    # 构造方法__init__,名字固定；</span><br><span class="line">    # 通过类创建对象的时候，系统会自动的调用这个方法去初始化对象的属性</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    self:</span><br><span class="line">        1.类中所有的对象方法都会默认有一个self参数，用来指向调用方法的对象(谁调用当前这个方法就指向谁)</span><br><span class="line">        2.调用带有self的方法，不需要给self传参，系统会自动将方法调用者传给它</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name1=&apos;&apos;):</span><br><span class="line">        # 我们一般在这个地方去声明对象的属性</span><br><span class="line">        # name、age、gender就是人这个类的对象的属性</span><br><span class="line">        self.name = name1</span><br><span class="line">        self.age = 0</span><br><span class="line">        self.gender = &apos;女&apos;</span><br><span class="line">    # 对象方法：1.所有的对象方法都有一个默认的参数self</span><br><span class="line">    #          2.直接声明在类中的函数，都是对象方法</span><br><span class="line">    #          3.对象方法必须使用对象去调用</span><br><span class="line">    def run(self):</span><br><span class="line">        print(self.name,&apos;跑起来&apos;)</span><br></pre></td></tr></table></figure>
+<h1 id="声明一个类"><a href="#声明一个类" class="headerlink" title="声明一个类"></a>声明一个类</h1><p>声明一个人对应的类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">	# count就是类变量</span><br><span class="line">    count = 61</span><br><span class="line">    # 构造方法</span><br><span class="line">    def __init__(self,aa=&apos;&apos;):</span><br><span class="line">        self.name=aa</span><br><span class="line">        self.age=0</span><br><span class="line">        self.gender=&apos;女&apos;</span><br><span class="line">    # 对象方法</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;跑起来&apos;)</span><br></pre></td></tr></table></figure>
+<p>1.使用类变量:通过（类名.类变量）的形式在类外去使用、获取类变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(Person.count)           # 执行结果：   61</span><br></pre></td></tr></table></figure>
+<p>2.对象属性的使用（对象.属性名）        name、age、gender都是对象属性。</p>
+<p>如果执行（类.属性名） 就会报属性的错误，如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(Person.name)  #AttributeError: type object &apos;Person&apos; has no attribute &apos;name&apos;</span><br></pre></td></tr></table></figure>
+<p>3.对象方法run: 对象方法只能通过对象去调用–&gt; （对象.方法名(实参列表)）</p>
+<p>单独执行对象方法: run() 就会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run() #NameError: name &apos;run&apos; is not defined</span><br></pre></td></tr></table></figure>
+<p>单独执行（类.对象方法）Person.run() 也会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: run() missing 1 required positional argument: &apos;self&apos;</span><br></pre></td></tr></table></figure>
+<p>4.声明对象: 类名(参数)</p>
+<p>通过类创建对象：会自动调用类的<strong> init </strong>方法去初始化对象的属性<br>类名(参数)，这个参数有没有，有就去<strong> init </strong>方法中看</p>
+<p>通过Person类，创建了一个对象p1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1 = Person(&apos;张三&apos;)</span><br></pre></td></tr></table></figure>
+<p>创建完对象后，就可以通过对象获取对象属性 : （对象.属性名）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(p1.name)   # 执行结果： 张三</span><br></pre></td></tr></table></figure>
+<p>通过对象给属性赋值 通过对象去调用对象方法(也叫给对象发送消息)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1.age = 10</span><br><span class="line">print(p1.age)    # 执行结果： 10</span><br></pre></td></tr></table></figure>
+<p>通过对象去调用对象方法(也叫给对象发送消息)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1.run()          # 执行结果： 张三 跑起来</span><br></pre></td></tr></table></figure>
+<p>5.一个类可以拥有多个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p2 = Person()</span><br><span class="line">p2.name = &apos;LuoHao&apos;</span><br><span class="line">p2.age = 34</span><br><span class="line">p2.gender = &apos;男&apos;</span><br><span class="line">p2.run()           # 执行结果：LuoHao 跑起来</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

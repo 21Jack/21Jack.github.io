@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="#python3 条件控制Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+
+1.if  条件语句关键字：if 、elif、else基本格式：
+if 条件语句1：
+    执行语句块1
+elif 条件语句2：
+    执行语句块2
+else：
+    " />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:32:40.002Z"><a href="/2018/07/29/Python3基础/第四天Python3基本语法if/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>#python3 条件控制<br>Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。</p>
+<p><img src="D:\Python学习\每天课堂代码\GIT\if-condition.jpg" alt="if-condition"></p>
+<h1 id="1-if-条件语句"><a href="#1-if-条件语句" class="headerlink" title="1.if  条件语句"></a>1.if  条件语句</h1><p>关键字：if 、elif、else<br>基本格式：</p>
+<pre><code>if 条件语句1：
+    执行语句块1
+elif 条件语句2：
+    执行语句块2
+else：
+    执行语句块3
+其他语句（与if在同一缩进）
+</code></pre><p>执行过程：<br>1.判断条件语句1是否为True，如果为True就执行冒号后面的执行语句块1，整个条件结构就执行完了，执行其他语句。<br>2.如果是False，就去判断条件语句2是否为True。如果是True就执行 执行语句块2，再执行其他语句。<br>3.如果是False，就去判断条件语句3是否为True<br>注意：</p>
+<ul>
+<li>1.冒号后面的语句块和冒号所在的语句要保持一个缩进长度。</li>
+<li>2.使用缩进来划分语句块，相同的缩进数的语句在一起组成一个语句块。</li>
+<li>3.在Python中没有switch - case语句。</li>
+</ul>
+<p>##1.1 if<br>关键字 ：if<br>基本格式：<br>    if 条件语句：<br>        执行语句块<br>执行过程：<br>判断条件语句的值是否为True，如果True，就只执行执行语句块。否则就直接执行if语句后面的其他语句<br>    要求：判断年龄是否大于18，如果大于18就输‘成年人’<br>    age = 19<br>    if age &gt; 18:<br>        print(‘成年人’)</p>
+<p>练习： 判断一个数是否是偶数，如果是就打印消息‘xxx是偶数’<br>    num = 10<br>    if num % 2 == 0 :<br>        print(‘%d 是偶数’%(num))</p>
+<p>##1.2if-else<br>关键字：if 、elif<br>基本格式：<br>    if 条件语句：<br>        执行语句块1<br>    else:<br>    执行语句块2<br>判断条件语句1是否为True，如果为True，就执行冒号后面的执行语句块1，否则执行执行语句块2<br>练习：输入一个数，判断该整数是否为偶数。<br>    num = 11<br>    if num % 2 == 0 :<br>        print(‘%d 是偶数’%(num))<br>    else:<br>        print(‘%d 不是偶数’%(num))</p>
+<p>练习：输入一个数，如果这个数大于10，就输出他的2倍值，否则输出这个数的2次幂<br>    n = 2<br>    if n &gt; 10:<br>        print(‘%d n 的2倍值’%(n * 2))<br>    else:<br>        print(‘%d n 的2幂’%(n ** 2))</p>
+<h2 id="1-3if-elif-elif-else"><a href="#1-3if-elif-elif-else" class="headerlink" title="1.3if - elif - elif - else"></a>1.3if - elif - elif - else</h2><p>关键字：if 、elif、else<br>基本格式：<br>    if 条件语句1：<br>        执行语句块1<br>    elif 条件语句2：<br>        执行语句块2<br>    else：<br>        执行语句块3</p>
+<p>练习: 给一个成绩，；判断成绩是优秀（90-100）、良好（80-89）、中等（70-79）、不及格（60以下）</p>
+<pre><code>grade = int(input(&apos;请输入一个分数：&apos;))
+if grade &lt; 60:
+    if grade &lt; 0:
+        print(&apos;成绩有误&apos;)
+    else:
+        print(&apos;不及格&apos;)
+elif grade &lt; 80:
+    print(&apos;中等&apos;)
+elif grade &lt; 90:
+    print(&apos;良好&apos;)
+elif grade &lt;= 100:
+    print(&apos;优秀&apos;)
+else :
+    print(&apos;成绩有误&apos;)
+</code></pre><ul>
+<li>总结：</li>
+<li>1.入宫要求中需要多个判断，可以使用多个elif的if语句。</li>
+<li>2.一个 if/elif/else语句中可以嵌套其他的if语句，要注意缩进</li>
+</ul>
+<p>#2 input()函数：<br>input()：从控制台获取键盘输入的一个字符串，以回车结束。<br>    num = input(‘请输入一个数:’)<br>    print(num)<br>输出结果如下：<br>    请输入一个数:3<br>    3</p>
+<p>#3 数据类型的转换<br>有时候，我们需要对数据内置的类型进行转换，数据类型的转换，你只需要将数据类型作为函数名即可。</p>
+<p>##3.1 将其他的数据转换成数字<br>int() 函数用于将一个字符串或数字转换为整型。<br>    num = 12.56<br>    print(int(num))  # 将浮点数转换成整数(直接去掉小数部分)<br>    bool1 = False<br>    print(int(bool1))  # 将布尔值转换成整数，True -&gt; 1  False -&gt; 0<br>    str1 = ‘129’<br>    print(int(str1))  # 只有纯数字字符串/纯数字字符串前有+、-号的字符串，才能转换成相应的整数<br>输出结果如下：<br>    12<br>    0<br>    129</p>
+<p>##3.2 将其他数据转换成浮点型数据<br>float() 函数用于将整数和字符串转换成浮点数。<br>    print(float())<br>    print(float(1))<br>    print(float(-12.9))<br>输出结果如下：<br>    0.0<br>    1.0<br>    -12.9</p>
+<p>##3.3 将其他的数据转换成布尔值<br>数字 -&gt; 布尔： 非0是True，0是False<br>    print(bool(12.8))<br>    print(bool(-12.9))<br>    print(bool(0.0))<br>输出结果如下：<br>    True<br>    True<br>    False<br> 字符串 -&gt; 布尔：除了空串(‘’)是False,其他的都是True<br>    print(bool(‘abd’))<br>    print(bool(‘00p’))<br>    print(bool(‘’))<br>输出结果如下：<br>    True<br>    True<br>    False</p>
+<ul>
+<li><p>注意:可以在if或者while循环后的条件语句，可以不是结果为True/False的表达式，也可以是值是其他类型数据的表达式。判断的时候就看这个值转换成bool后的结果是True还是False</p>
+<pre><code>if &apos;aa&apos;:
+     print(&apos;aaa&apos;)
+</code></pre><p>判断一个字符串是否是空串，如果不是就直接打印这个字符串，否则打印”空串”<br>方法1：<br>  str1 = ‘’<br>  if str1:</p>
+<pre><code>print(str1)
+</code></pre><p>  else:</p>
+<pre><code>print(&apos;空串&apos;)
+</code></pre><p>输出结果如下：<br>  空串</p>
+<p>方法2：<br>  if str1 != ‘’:</p>
+<pre><code>print(str1)
+</code></pre><p>  else:</p>
+<pre><code>print(&apos;空串&apos;)
+</code></pre><p>输出结果如下：<br>  空串</p>
+</li>
+</ul>
+<p>##4 for循环与while循环</p>
+<p>python中循环:for循环、while循环（一个操作需要重复执行多次，这个时候就考虑使用循环）<br>python中的for循环只有for-in循环：<br>格式:<br>    for 变量 in 列表:<br>        循环体</p>
+<p>执行过程:使用变量去依次获取列表中的数据，知道获取完为止；每获取一个数据执行一次循环体<br>循环次数:由列表中的数据的个数决定</p>
+<p> 去获取字符串中每一个字符<br>    str1 = ‘abcdefuuuuhshshshakkknnlls’<br>    print(str1[0])<br>    print(str1[1])<br>    print(str1[2])<br>    for char in str1:<br>    print(char,end=’ ‘)<br>输出结果如下：<br>    a b c d e f u u u u h s h s h s h a k k k n n l l s<br> 去统计一个字符串中’a’出现的次数<br>    count = 0<br>    for char in str1:<br>        if char == ‘a’:<br>            count += 1<br>    print(count)<br>输出结果如下：<br>    2</p>
+<p>##5while 条件语句:</p>
+<p>格式:<br>    while 条件语句:<br>        循环体<br>执行过程:判断条件语句的结果是否为True，如果为True就执行依次循环体。<br>执行完循环体后再去判断条件语句是否为True，为True的话又执行循环体。重复这个过程，直到条件语句的结果为False<br>for循环可以实现的操作，while循环都可以</p>
+<p> 打印1-100<br>循环逻辑：</p>
+<pre><code># num=1   print(1) num = 1+1 = 2
+# num=2   print(2) num = 3
+# num=3   print(3) num = 4
+# ...
+# num=99  print(99) num=100
+# num=100 print(100) num=101
+</code></pre><p>实现：<br>    num = 1<br>        while num &lt;= 100:<br>        print(num,end=’ ‘)<br>        num += 1<br>运行结果如下：<br>    1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100</p>
+<p>计算1+2+3+…+100<br>    ‘’’<br>    1&lt;=100  sum1 = 0+1 num=2<br>    2&lt;=100  sum1 = 1+2 num=3<br>    3&lt;=100  sum1 = 1+2+3 num=4<br>    ..       num=99<br>    99&lt;=100  sum1 = 1+2+..+98+99  num=100<br>    100&lt;=100 sum1 = 1+2+..+98+99+100 num=101<br>    101&lt;=100  False -&gt; 结束<br>    ‘’’<br>    num = 1<br>    sum1 = 0<br>    while num &lt;= 100:<br>        sum1 += num  #sum1 = sum1+num<br>        num += 1  #num = num+1<br>    print(sum1)<br>运行结果如下：<br>    5050</p>
+<p>求1-100中所有的偶数的和（while循环）<br>方法1：<br>    num = 0<br>    sum1 = 0<br>    while num &lt;=100:<br>        if num % 2 == 0:<br>            sum1 += num<br>        num += 1<br>    print(sum1)<br>运行结果如下：<br>    2550</p>
+<p>方法2：<br>    num = 0<br>    sum1 = 0<br>    while num &lt;= 100:<br>        sum1 += num<br>        num += 2<br>    print(sum1)<br>运行结果如下：<br>    2550</p>
+<p>##6.range函数：<br>range():可以生成一个数值范围<br>用法1： range(n)，生成0~n-1的数<br>    print(range(10))<br>    for x in range(10):<br>        print(x,end=’’)<br>输出结果如下：<br>    range(0, 10)<br>    0 1 2 3 4 5 6 7 8 9<br>用法2：range(m,n)，生成 m ~ n-1的数<br>    for x in range(2,10):<br>        print(x,end=’’)<br>输出结果如下：<br>    2 3 4 5 6 7 8 9<br>打印1-100<br>    for x in range(1,101):<br>        print(x,end=’’)<br>输出结果如下：<br>    1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </p>
+<p> 打印0-100之间所有的偶数<br>    for x in range(0,101):<br>        if x % 2 == 0:<br>            print(x,end=’’)<br>输出结果如下：<br>    0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100<br>用法3： range(m,n,step):从m开始每step取一个数，取到n前一个数为止（step的值默认是1）</p>
+<pre><code>for x in range(1,100,2):
+    print(x,end=&apos;&apos;)  
+</code></pre><p>输出结果如下：<br>    1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99<br> 不通过字符串相乘，打印10遍”=”<br> 注意:如果循环中的变量取到的值没有意思，循环只是单纯的控制次数，这个时候for后面的变量名一般都用”_”代替<br>    for _ in range(10):<br>        print(‘=’,end=’ ‘)  </p>
+<p>输出结果如下：<br>    = = = = = = = = = =</p>
+<p>求1+2+3+…+100<br>1+2+3+4+5<br>     (1,2,3,4,5)  循环执行五次<br>    ‘’’<br>    第一次： x = 1  sum1 = 0 + 1<br>    第二次:  x = 2  sum1 = 0+1+2<br>    第三次: x = 3   sum1 = 1+2+3<br>    第四次: x = 4   sum1 = 1+2+3+4<br>    第五次: x = 5   sum1 = 1+2+3+4+5</p>
+<pre><code>&apos;&apos;&apos;
+sum1 = 0
+for x in range(1,101):
+
+    sum1 += x  # sum1 = sum1+x
+    # print(sum1)  #每次循环都打印
+print(sum1)
+</code></pre><p>输出结果如下：<br>    5050<br>求10!的阶层。n! = 1 <em> 2 </em> 3<em>…</em>n<br>    num = 1<br>    for x in range(1,11):<br>        num *= x<br>    print(num)<br>输出结果如下：<br>    3628800</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

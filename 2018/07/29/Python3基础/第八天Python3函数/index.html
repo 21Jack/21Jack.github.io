@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="马向阳" />
+
+  
+  <meta name="description" content="[TOC]
+Python3 函数（上）函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。
+函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。
+1.函数的定义a.格式def  函数名" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-07-29T09:31:53.254Z"><a href="/2018/07/29/Python3基础/第八天Python3函数/">2018-07-29</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[TOC]</p>
+<h1 id="Python3-函数（上）"><a href="#Python3-函数（上）" class="headerlink" title="Python3 函数（上）"></a>Python3 函数（上）</h1><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
+<p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
+<h2 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1.函数的定义"></a>1.函数的定义</h2><p>a.格式<br>def  函数名(参数列表):<br>    说明文字<br>    函数体<br>def: 是Python中声明函数的关键字<br>函数名：标识符，PEP8 （小写 下滑线）见名知义（根据函数名大概就知道函数的功能）<br>（）：固定格式，不能省略<br>参数列表：参数的作用就是从外面往函数中传值。<br>一个函数可以没有参数，也可以有多个参数（多个参数用逗号隔开）<br>冒号：是固定的格式<br>说明文字：对函数功能进行说明<br>函数体：就是实现函数功能的代码段<br>b.对于初学者来说，声明函数的步骤<br>1.确定函数的功能（确定函数是干什么用的）<br>2.确定函数名 （根据功能确定函数名）<br>3.确定参数（确定是否有参数，确定参数有几个，看实现这么功能需不需要从外面传值进去）<br>4.确定是否需要返回值（返回值：就是函数返回给调用者的数据。Python中所有的函数都有返回值，默认是None）<br>5.实现函数的功能</p>
+<p>注意：函数只有在调用的时候才会执行</p>
+<p>##2.函数的调用</p>
+<p>格式：<br>函数名（参数列表）</p>
+<p>函数名：你声明的需要调用的函数（已经声明过的函数）<br>函数列表：实参<br>调用过程，就是用实参给形参赋值，并且执行函数体获取返回值<br>函数的</p>
+<p>练习：让我们使用函数来输出”Hello World！”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 声明函数aaa</span><br><span class="line">def aaa():</span><br><span class="line">    &quot;&quot;&quot;打印‘hello python’&quot;&quot;&quot;</span><br><span class="line">    print(&apos;hello python&apos;)</span><br><span class="line"># 调用函数aaa</span><br><span class="line">aaa()</span><br></pre></td></tr></table></figure>
+<p>以上代码输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello python</span><br><span class="line">print(aaa())</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.一个函数声明后，可以调用多次<br>2.Python中所有的函数调用表达式都有值</p>
+<p>练习：写一个函数，去打印10的阶层（1 <em> 2 </em> 3 <em> …… </em> 10）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def jieceng():</span><br><span class="line">    &apos;&apos;&apos;打印10!&apos;&apos;&apos;</span><br><span class="line">    num = 10</span><br><span class="line">    jieceng=1</span><br><span class="line">    for x in range(1,num+1):</span><br><span class="line">        jieceng *=x</span><br><span class="line">    print(jieceng)</span><br><span class="line"></span><br><span class="line">jieceng()</span><br></pre></td></tr></table></figure>
+<p>以上代码输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3628800</span><br></pre></td></tr></table></figure>
+<h2 id="3-带参数的函数"><a href="#3-带参数的函数" class="headerlink" title="3.带参数的函数"></a>3.带参数的函数</h2><p>格式：<br>def 函数名（参数列表）<br>    说明文字<br>    函数体<br>形参：获取从外面传递给函数内部的值<br>函数的调用<br>函数名（实参列表）<br>实参：调用函数的时候给函数传的值</p>
+<p>例题：写一个函数，打印两个数的和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 形参就是变量名</span><br><span class="line">def my_sum(num1, num2):</span><br><span class="line">    &apos;&apos;&apos;打印num1和num2的和&apos;&apos;&apos;</span><br><span class="line">    print(num1+num2)</span><br></pre></td></tr></table></figure>
+<h2 id="4-带参数的函数调用"><a href="#4-带参数的函数调用" class="headerlink" title="4.带参数的函数调用"></a>4.带参数的函数调用</h2><p>注意！：函数调用的时候一定要保证每个形参都有值</p>
+<p>1.位置参数（用实参依次给形参赋值）</p>
+<p>2.关键字参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_sum(10, 12)# 执行注代码：现将num1 =10 num2= 20 再执行my_sum的函数</span><br><span class="line">my_sum(num2=15, num1=5)</span><br><span class="line"># my_sum(30) #TypeError</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">22</span><br><span class="line">20</span><br><span class="line">TypeError: my_sum() missing 1 required positional argument: &apos;num2&apos;</span><br></pre></td></tr></table></figure>
+<p>练习：打印一个数的立方</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 打印一个数的立方</span><br><span class="line">def my_cube(num1):</span><br><span class="line">    &apos;&apos;&apos;num1的立方&apos;&apos;&apos;</span><br><span class="line">    print(num1**3)</span><br><span class="line"># 调用</span><br><span class="line">my_cube(10)</span><br><span class="line">my_cube(num1=10)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1000</span><br><span class="line">1000</span><br></pre></td></tr></table></figure>
+<h2 id="5-参数的默认值"><a href="#5-参数的默认值" class="headerlink" title="5.参数的默认值"></a>5.参数的默认值</h2><p>在Python中，函数的参数可以设置默认值(函数声明的时候给参数赋值)</p>
+<p>如果参数设置了默认值，那么调用函数的时候，这个参数可以传参，也可以不传参</p>
+<p>练习：写一个函数，问候某人（打印：xxx ,how are  you !）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def say_hi(name=&apos;xxx&apos;):</span><br><span class="line">    &apos;&apos;&apos;问候&apos;&apos;&apos;</span><br><span class="line">    print(&apos;%s,how are you !&apos;%(name))</span><br><span class="line"># 函数调用的要求：保证每个参数有值</span><br><span class="line">say_hi()</span><br><span class="line">say_hi(&apos;张三&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxx,how are you !</span><br><span class="line">张三,how are you !</span><br></pre></td></tr></table></figure>
+<p>注意;如果声明函数的时候，函数中有多个参数，有默认值参数必须放到没有默认值的参数的后面，否则报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def say_hello(message, name=&apos;xxx&apos;):   say_hello(name=&apos;xxx&apos;,message)SyntaxError: non-default argument follows default argument</span><br><span class="line">    &apos;&apos;&apos;wenhou&apos;&apos;&apos;</span><br><span class="line">    print(&apos;%s, %s &apos;%(name,message))</span><br><span class="line">say_hello(&apos;你吃饭了么？&apos;,&apos;李四&apos;)</span><br><span class="line">say_hello(&apos;最近好么？&apos;)</span><br><span class="line">say_hello(name=&apos;小花&apos;,message=&apos;i like you !&apos;)</span><br><span class="line">say_hello(message=&apos;我恨你！！&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">李四, 你吃饭了么？ </span><br><span class="line">xxx, 最近好么？ </span><br><span class="line">小花, i like you ! </span><br><span class="line">xxx, 我恨你！！</span><br></pre></td></tr></table></figure>
+<h2 id="6-参数的不确定"><a href="#6-参数的不确定" class="headerlink" title="6.参数的不确定"></a>6.参数的不确定</h2><p>参数个数不确定的时候，就在参数列表中声明一个变量前面加一个*号</p>
+<p>这个时候这个变量就变成了元组。函数调用的时候，所有的实参都会添加这个元组中的</p>
+<p>练习：写一个函数，求多个数的和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def my_sum2(*nums):#变成一个元组</span><br><span class="line">    &apos;&apos;&apos;多个数的求和&apos;&apos;&apos;</span><br><span class="line">    sum1 = 0</span><br><span class="line">    for item in nums:</span><br><span class="line">        sum1 += item</span><br><span class="line">    print(sum1)</span><br><span class="line"></span><br><span class="line">my_sum2(10,23,45)   #(10, 23, 45)</span><br><span class="line">my_sum2(12,2,30)</span><br><span class="line">my_sum2(1,2,)</span><br><span class="line">my_sum2(1,2,4,7,9,)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">78</span><br><span class="line">44</span><br><span class="line">3</span><br><span class="line">23</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
+      </li>
+    
+      <li>
+        <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 马向阳
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
