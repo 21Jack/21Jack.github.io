@@ -1,114 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="马向阳">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Hexo"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Hexo"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://yoursite.com"/>
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<head>
+  <meta charset="utf-8">
   
   
-    <link rel="icon" href="/favicon.png">
+  <meta name="description" content="[TOC]
+Python3 函数（上）函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。
+函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。
+1.函数的定义a.格式def  函数名" />
   
 
-  <!-- Site Title -->
+  
+  
+  
+  
+  
+  
   <title>Hexo</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] Python3 函数（上）函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 1.函数的定义a.格式def  函数名(参数列表):    说明文字    函数体def: 是Python中声明函数的关键字函数名：标识符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/Python3基础/第八天Python3函数/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] Python3 函数（上）函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 1.函数的定义a.格式def  函数名(参数列表):    说明文字    函数体def: 是Python中声明函数的关键字函数名：标识符">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-29T09:31:53.254Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="[TOC] Python3 函数（上）函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 1.函数的定义a.格式def  函数名(参数列表):    说明文字    函数体def: 是Python中声明函数的关键字函数名：标识符">
   
-  <link rel="stylesheet" href="/css/style.light.css">
-
-  <!-- Google Analytics -->
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
   
 
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
 </head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
 
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">Untitled Post</p>
-          <p class="subtitle"></p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://github.com/<your-github-username>">
-                  
-                  Github
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="mailto:<your-email-address>">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
 </header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Python3基础/第八天Python3函数" class="post-Python3基础/第八天Python3函数 post type-post status-publish format-standard hentry">
+    <!---->
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By 马向阳</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2018-07-29</span>
-            <span class="time">18:23:33</span>
-          </span>
-          
-        </div>
-        <!-- Tags -->
+      <header class="entry-header">
         
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p>[TOC]</p>
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/07/29/Python3基础/第八天Python3函数/" data-id="cjk6qp1en00030fnd3fw0ck85" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>[TOC]</p>
 <h1 id="Python3-函数（上）"><a href="#Python3-函数（上）" class="headerlink" title="Python3 函数（上）"></a>Python3 函数（上）</h1><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
 <p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
 <h2 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1.函数的定义"></a>1.函数的定义</h2><p>a.格式<br>def  函数名(参数列表):<br>    说明文字<br>    函数体<br>def: 是Python中声明函数的关键字<br>函数名：标识符，PEP8 （小写 下滑线）见名知义（根据函数名大概就知道函数的功能）<br>（）：固定格式，不能省略<br>参数列表：参数的作用就是从外面往函数中传值。<br>一个函数可以没有参数，也可以有多个参数（多个参数用逗号隔开）<br>冒号：是固定的格式<br>说明文字：对函数功能进行说明<br>函数体：就是实现函数功能的代码段<br>b.对于初学者来说，声明函数的步骤<br>1.确定函数的功能（确定函数是干什么用的）<br>2.确定函数名 （根据功能确定函数名）<br>3.确定参数（确定是否有参数，确定参数有几个，看实现这么功能需不需要从外面传值进去）<br>4.确定是否需要返回值（返回值：就是函数返回给调用者的数据。Python中所有的函数都有返回值，默认是None）<br>5.实现函数的功能</p>
@@ -150,42 +123,109 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def my_sum2(*nums):#变成一个元组</span><br><span class="line">    &apos;&apos;&apos;多个数的求和&apos;&apos;&apos;</span><br><span class="line">    sum1 = 0</span><br><span class="line">    for item in nums:</span><br><span class="line">        sum1 += item</span><br><span class="line">    print(sum1)</span><br><span class="line"></span><br><span class="line">my_sum2(10,23,45)   #(10, 23, 45)</span><br><span class="line">my_sum2(12,2,30)</span><br><span class="line">my_sum2(1,2,)</span><br><span class="line">my_sum2(1,2,4,7,9,)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">78</span><br><span class="line">44</span><br><span class="line">3</span><br><span class="line">23</span><br></pre></td></tr></table></figure>
 
-        </div>
-      </div>
-    </div>
-  </div>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/07/29/Python3基础/第八天Python3函数/">
+    <time datetime="2018-07-29T09:31:53.254Z" class="entry-date">
+        2018-07-29
+    </time>
+</a>
+    
+    
+    </footer>
 </article>
 
 
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2018/07/29/Python3基础/第六天Python3基本语法List/" rel="prev"><span class="meta-nav">←</span> (no title)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2018/07/29/Python3基础/第五天Python基本语法/" rel="next">(no title) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
 
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
     </div>
-  </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十天Python3函数变量/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 JK21
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
 
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  </body>
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
 </html>
-

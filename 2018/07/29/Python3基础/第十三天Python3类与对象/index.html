@@ -1,114 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="马向阳">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Hexo"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Hexo"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://yoursite.com"/>
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<head>
+  <meta charset="utf-8">
   
   
-    <link rel="icon" href="/favicon.png">
+  <meta name="description" content="[TOC]
+#类和对象（1） 
+1. 类与对象的定义类：具有相同属性和功能的对象的集合；是抽象的对象：类的实例；具体的12如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]
+##1" />
   
 
-  <!-- Site Title -->
+  
+  
+  
+  
+  
+  
   <title>Hexo</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] #类和对象（1）  1. 类与对象的定义类：具有相同属性和功能的对象的集合；是抽象的对象：类的实例；具体的12如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象] ##1.1 类的声明123class 类名(父类):         class 类名:    属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/Python3基础/第十三天Python3类与对象/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] #类和对象（1）  1. 类与对象的定义类：具有相同属性和功能的对象的集合；是抽象的对象：类的实例；具体的12如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象] ##1.1 类的声明123class 类名(父类):         class 类名:    属性">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-29T09:32:10.937Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="[TOC] #类和对象（1）  1. 类与对象的定义类：具有相同属性和功能的对象的集合；是抽象的对象：类的实例；具体的12如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象] ##1.1 类的声明123class 类名(父类):         class 类名:    属性">
   
-  <link rel="stylesheet" href="/css/style.light.css">
-
-  <!-- Google Analytics -->
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
   
 
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
 </head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
 
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">Untitled Post</p>
-          <p class="subtitle"></p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://github.com/<your-github-username>">
-                  
-                  Github
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="mailto:<your-email-address>">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
 </header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Python3基础/第十三天Python3类与对象" class="post-Python3基础/第十三天Python3类与对象 post type-post status-publish format-standard hentry">
+    <!---->
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By 马向阳</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2018-07-29</span>
-            <span class="time">18:23:33</span>
-          </span>
-          
-        </div>
-        <!-- Tags -->
+      <header class="entry-header">
         
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p>[TOC]</p>
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/07/29/Python3基础/第十三天Python3类与对象/" data-id="cjk6qp1f2000d0fndxy32s35r" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>[TOC]</p>
 <p>#类和对象（1） </p>
 <h1 id="1-类与对象的定义"><a href="#1-类与对象的定义" class="headerlink" title="1. 类与对象的定义"></a>1. 类与对象的定义</h1><p>类：具有相同属性和功能的对象的集合；是抽象的<br>对象：类的实例；具体的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]</span><br><span class="line">如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]</span><br></pre></td></tr></table></figure></p>
 <p>##1.1 类的声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class 类名(父类):         class 类名:</span><br><span class="line">    属性                       属性</span><br><span class="line">    方法                       方法</span><br></pre></td></tr></table></figure></p>
@@ -207,42 +180,109 @@
 <p>然后就是数据的处理了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    all_data =get_json_data()</span><br><span class="line">    clube=[]</span><br><span class="line">    for item in all_data:#item 字典</span><br><span class="line">        # 将字典中的每个键值对 对应的值 存到对象催要的属性中</span><br><span class="line">        #  开发中</span><br><span class="line">        p=Person()</span><br><span class="line">        for key in item:  #遍历字典里的key:value</span><br><span class="line">            setattr(p,key,item[key])</span><br><span class="line">            print(p.__dict__,key,item[key])</span><br><span class="line">        clube.append(p)</span><br><span class="line">        print(p.__dict__)</span><br><span class="line">    for item in clube:</span><br><span class="line">        print(item.name,item.__dict__)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-        </div>
-      </div>
-    </div>
-  </div>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/07/29/Python3基础/第十三天Python3类与对象/">
+    <time datetime="2018-07-29T09:32:10.937Z" class="entry-date">
+        2018-07-29
+    </time>
+</a>
+    
+    
+    </footer>
 </article>
 
 
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2018/07/29/Python3基础/第十二天Python3类与对象/" rel="prev"><span class="meta-nav">←</span> (no title)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2018/07/29/Python3基础/第十一天Python3文件读写/" rel="next">(no title) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
 
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
     </div>
-  </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十天Python3函数变量/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 JK21
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
 
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  </body>
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
 </html>
-

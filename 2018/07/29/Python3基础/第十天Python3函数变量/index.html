@@ -1,114 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="马向阳">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Hexo"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Hexo"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://yoursite.com"/>
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<head>
+  <meta charset="utf-8">
   
   
-    <link rel="icon" href="/favicon.png">
+  <meta name="description" content="#Python3 函数（下）
+8 函数的变量def 函数名(参数列表):    函数体我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。普通变量能做的事情，函数变量都能做
+
+函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。
+可以用一个变量给另" />
   
 
-  <!-- Site Title -->
+  
+  
+  
+  
+  
+  
   <title>Hexo</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#Python3 函数（下） 8 函数的变量def 函数名(参数列表):    函数体我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。普通变量能做的事情，函数变量都能做  函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。 可以用一个变量给另外一个变量赋值。 函数变量作为函数的参数。 函数作为返回值。  123456 1. 函数名就是函数类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/Python3基础/第十天Python3函数变量/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#Python3 函数（下） 8 函数的变量def 函数名(参数列表):    函数体我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。普通变量能做的事情，函数变量都能做  函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。 可以用一个变量给另外一个变量赋值。 函数变量作为函数的参数。 函数作为返回值。  123456 1. 函数名就是函数类">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-29T09:32:34.517Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#Python3 函数（下） 8 函数的变量def 函数名(参数列表):    函数体我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。普通变量能做的事情，函数变量都能做  函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。 可以用一个变量给另外一个变量赋值。 函数变量作为函数的参数。 函数作为返回值。  123456 1. 函数名就是函数类">
   
-  <link rel="stylesheet" href="/css/style.light.css">
-
-  <!-- Google Analytics -->
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
   
 
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
 </head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
 
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">Untitled Post</p>
-          <p class="subtitle"></p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://github.com/<your-github-username>">
-                  
-                  Github
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="mailto:<your-email-address>">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
 </header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Python3基础/第十天Python3函数变量" class="post-Python3基础/第十天Python3函数变量 post type-post status-publish format-standard hentry">
+    <!---->
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By 马向阳</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2018-07-29</span>
-            <span class="time">18:23:33</span>
-          </span>
-          
-        </div>
-        <!-- Tags -->
+      <header class="entry-header">
         
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p>#Python3 函数（下）</p>
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/07/29/Python3基础/第十天Python3函数变量/" data-id="cjk6qp1er00060fndcdj3ato9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#Python3 函数（下）</p>
 <h2 id="8-函数的变量"><a href="#8-函数的变量" class="headerlink" title="8 函数的变量"></a>8 函数的变量</h2><p>def 函数名(参数列表):<br>    函数体<br>我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。<br>普通变量能做的事情，函数变量都能做</p>
 <ol>
 <li>函数名就是函数类型变量（类型名:function）,存的是函数入口的地址。</li>
@@ -150,42 +124,109 @@
 </ol>
 <p>关于<strong>name</strong>属性:<br><strong> name </strong>是每个模块都有的属性，作用是用来存储模块的名字。<br>当模块不是正在执行的模块， <strong> name </strong>属性的值是模块对应的文件的文件名；<br>当模块正在执行的时候，<strong> name </strong> 的值就是一个固定值 ‘<strong> main </strong>‘</p>
 
-        </div>
-      </div>
-    </div>
-  </div>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/07/29/Python3基础/第十天Python3函数变量/">
+    <time datetime="2018-07-29T09:32:34.517Z" class="entry-date">
+        2018-07-29
+    </time>
+</a>
+    
+    
+    </footer>
 </article>
 
 
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2018/07/29/Python3基础/第四天Python3基本语法if/" rel="prev"><span class="meta-nav">←</span> (no title)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2018/07/29/Python3基础/第十四天Python3类与对象/" rel="next">(no title) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
 
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
     </div>
-  </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十天Python3函数变量/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Python3基础/第十二天Python3类与对象/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 JK21
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
 
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  </body>
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
 </html>
-
