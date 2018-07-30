@@ -1,114 +1,356 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  
-  <title>Hexo</title>
-  <meta name="author" content="JK21" />
-
-  
-
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-  
-  <meta property="og:site_name" content="Hexo" />
-
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
   
   
-
   
-    <meta property="og:image" content="" />
   
-
+  <title>jk21wp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="jk21wp">
+<meta property="og:url" content="http://jk21wp.coding.me/index.html">
+<meta property="og:site_name" content="jk21wp">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jk21wp">
   
-  <link href="/css/images/favicon.ico" rel="icon" />
+    <link rel="alternative" href="/atom.xml" title="jk21wp" type="application/atom+xml">
   
-
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-
-
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
-
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Hexo</a></h1>
-  <h2><a href="/"></a></h2>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">JK21</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">刻苦学习，解决眼前的苟且，追寻诗和远方...</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
 </div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">JK21</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">JK21</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">刻苦学习，解决眼前的苟且，追寻诗和远方...</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+      <div class="body-wrap">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T11:28:32.000Z"><a href="/2018/07/29/test/">2018-07-29</a></time>
-      
-      
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <h1 class="title"><a href="/2018/07/29/test/">test</a></h1>
+    <div class="article-meta">
+      <a  href="/2018/07/29/test/" class="article-date">
+      <time datetime="2018-07-29T11:28:32.000Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/07/29/test/">test</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+
+      </header>
       
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
         
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
       <div class="clearfix"></div>
-    </footer>
+    </div>
+    
   </div>
+  
 </article>
 
 
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:40.002Z"><a href="/2018/07/29/Python3基础/第四天Python3基本语法if/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a></h1>
-  
 
-    </header>
-    <div class="entry">
+
+
+
+
+
+  
+    <article id="post-Python3基础/第四天Python3基本语法if" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/29/Python3基础/第四天Python3基本语法if/" class="article-date">
+      <time datetime="2018-07-29T09:32:40.002Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
       
+          
         <p>#python3 条件控制<br>Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。</p>
 <p><img src="D:\Python学习\每天课堂代码\GIT\if-condition.jpg" alt="if-condition"></p>
 <h1 id="1-if-条件语句"><a href="#1-if-条件语句" class="headerlink" title="1.if  条件语句"></a>1.if  条件语句</h1><p>关键字：if 、elif、else<br>基本格式：</p>
@@ -207,39 +449,47 @@ print(sum1)
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
       <div class="clearfix"></div>
-    </footer>
+    </div>
+    
   </div>
+  
 </article>
 
 
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:34.517Z"><a href="/2018/07/29/Python3基础/第十天Python3函数变量/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a></h1>
-  
 
-    </header>
-    <div class="entry">
+
+
+
+
+
+  
+    <article id="post-Python3基础/第十天Python3函数变量" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/29/Python3基础/第十天Python3函数变量/" class="article-date">
+      <time datetime="2018-07-29T09:32:34.517Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
       
+          
         <p>#Python3 函数（下）</p>
 <h2 id="8-函数的变量"><a href="#8-函数的变量" class="headerlink" title="8 函数的变量"></a>8 函数的变量</h2><p>def 函数名(参数列表):<br>    函数体<br>我们在声明函数的时候，其实就是在声明一个类型是函数类型(function)的变量。<br>普通变量能做的事情，函数变量都能做</p>
 <ol>
@@ -285,39 +535,47 @@ print(sum1)
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
       <div class="clearfix"></div>
-    </footer>
+    </div>
+    
   </div>
+  
 </article>
 
 
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:29.009Z"><a href="/2018/07/29/Python3基础/第十四天Python3类与对象/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a></h1>
-  
 
-    </header>
-    <div class="entry">
+
+
+
+
+
+  
+    <article id="post-Python3基础/第十四天Python3类与对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/29/Python3基础/第十四天Python3类与对象/" class="article-date">
+      <time datetime="2018-07-29T09:32:29.009Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
       
+          
         <p>[TOC]</p>
 <p>#类与对象</p>
 <p>#1属性的私有化<br>属性的私有化  讲的是对属性的访问权限有限制<br>对象的属性（包括） 1公开属性 2私有属性 3保护属性 （Python中没有）<br>公开：在类的外部可以直接使用<br>公开属性：属性名是普通单词（不以两个下划线开头的属性名）<br>私有：在类的内部可以直接使用<br>私有属性：属性名可以两个下划线开头（不以两个下划线结束的属性名）</p>
@@ -400,39 +658,47 @@ print(sum1)
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
       <div class="clearfix"></div>
-    </footer>
+    </div>
+    
   </div>
+  
 </article>
 
 
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:23.065Z"><a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a></h1>
-  
 
-    </header>
-    <div class="entry">
+
+
+
+
+
+  
+    <article id="post-Python3基础/第十五天Python导入PyGame" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/29/Python3基础/第十五天Python导入PyGame/" class="article-date">
+      <time datetime="2018-07-29T09:32:23.065Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
       
+          
         <p>[TOC]</p>
 <p>#PyGame</p>
 <p>#1导入第三方库Pygame</p>
@@ -456,526 +722,17 @@ print(sum1)
       
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
       <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:16.728Z"><a href="/2018/07/29/Python3基础/第十二天Python3类与对象/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十二天Python3类与对象/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p>先理解几个编程思想：</p>
-<p>1.面向过程编程： 如C  （只有逻辑个过程 –&gt;遇到问题解决问题）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#实现两个数相加：</span><br><span class="line">a = 1 </span><br><span class="line">b = 2</span><br><span class="line">print(a + b)</span><br></pre></td></tr></table></figure>
-<p> 2.面向对象编程：java , C ++ , oc ，python 等（有类的语法）–&gt;（以对象为工具实现功能）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象.sum(1,2)#实现两个数字相加</span><br></pre></td></tr></table></figure>
-<p>3.函数式编程：C 、Java、Python （以函数为工具实现功能）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sum(num1,num2)</span><br><span class="line">	return num1+num2</span><br><span class="line">sum(1,2)</span><br></pre></td></tr></table></figure>
-<h1 id="类、对象"><a href="#类、对象" class="headerlink" title="类、对象"></a>类、对象</h1><p>类：具有相同属性的和相同功能的对象集合，是抽象的  </p>
-<p>对象：就是类的实例，是具体的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]</span><br><span class="line">如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]</span><br></pre></td></tr></table></figure>
-<p>类的声明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">声明类的格式：</span><br><span class="line">class	类名：</span><br><span class="line">	类的内容&#123;1.类变量 2.对象属性 3.方法（构造方法、对象方法、类方法、静态方法）&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>class : python中声明类的关键字</li>
-<li>类名：标识符，1.首字母大写！！！   2.见名知义</li>
-<li>冒号：固定格式 </li>
-<li><p>类的内容：冒号后一个缩进的内容，就是类的内容</p>
-</li>
-<li><p>类的内容：又包含</p>
-<ul>
-<li>1.类变量：声明在类中、方法之外的变量；要通过类去捕获（通过类能够让其具体的属性）</li>
-<li>2.对象属性：对象属性是指定义在方法的内部的属性 </li>
-<li><p>3.方法：声明在类中的函数就叫方法</p>
-<ul>
-<li><p>对象方法：1.所有的对象方法都有一个默认的参数self</p>
-<p>​                     self:</p>
-<pre><code>1.用来指向调用方法的对象(谁调用当前这个方法就指向谁)
-2.调用带有self的方法，不需要给self传参，系统会自动将方法调用者传给它
-</code></pre><p>​                   2.直接声明在类中的函数，都是对象方法</p>
-<pre><code>3.对象方法必须使用对象去调用
-</code></pre></li>
-<li><p>类方法</p>
-</li>
-<li><p>静态方法</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 声明一个人对应的类</span><br><span class="line">class Person:</span><br><span class="line">    # count就是类变量（通过类去使用）</span><br><span class="line">    count = 61  # 局部变量，作用域是整个类</span><br><span class="line"></span><br><span class="line">    # 构造方法__init__,名字固定；</span><br><span class="line">    # 通过类创建对象的时候，系统会自动的调用这个方法去初始化对象的属性</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    self:</span><br><span class="line">        1.类中所有的对象方法都会默认有一个self参数，用来指向调用方法的对象(谁调用当前这个方法就指向谁)</span><br><span class="line">        2.调用带有self的方法，不需要给self传参，系统会自动将方法调用者传给它</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name1=&apos;&apos;):</span><br><span class="line">        # 我们一般在这个地方去声明对象的属性</span><br><span class="line">        # name、age、gender就是人这个类的对象的属性</span><br><span class="line">        self.name = name1</span><br><span class="line">        self.age = 0</span><br><span class="line">        self.gender = &apos;女&apos;</span><br><span class="line">    # 对象方法：1.所有的对象方法都有一个默认的参数self</span><br><span class="line">    #          2.直接声明在类中的函数，都是对象方法</span><br><span class="line">    #          3.对象方法必须使用对象去调用</span><br><span class="line">    def run(self):</span><br><span class="line">        print(self.name,&apos;跑起来&apos;)</span><br></pre></td></tr></table></figure>
-<h1 id="声明一个类"><a href="#声明一个类" class="headerlink" title="声明一个类"></a>声明一个类</h1><p>声明一个人对应的类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">	# count就是类变量</span><br><span class="line">    count = 61</span><br><span class="line">    # 构造方法</span><br><span class="line">    def __init__(self,aa=&apos;&apos;):</span><br><span class="line">        self.name=aa</span><br><span class="line">        self.age=0</span><br><span class="line">        self.gender=&apos;女&apos;</span><br><span class="line">    # 对象方法</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;跑起来&apos;)</span><br></pre></td></tr></table></figure>
-<p>1.使用类变量:通过（类名.类变量）的形式在类外去使用、获取类变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(Person.count)           # 执行结果：   61</span><br></pre></td></tr></table></figure>
-<p>2.对象属性的使用（对象.属性名）        name、age、gender都是对象属性。</p>
-<p>如果执行（类.属性名） 就会报属性的错误，如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(Person.name)  #AttributeError: type object &apos;Person&apos; has no attribute &apos;name&apos;</span><br></pre></td></tr></table></figure>
-<p>3.对象方法run: 对象方法只能通过对象去调用–&gt; （对象.方法名(实参列表)）</p>
-<p>单独执行对象方法: run() 就会报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run() #NameError: name &apos;run&apos; is not defined</span><br></pre></td></tr></table></figure>
-<p>单独执行（类.对象方法）Person.run() 也会报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: run() missing 1 required positional argument: &apos;self&apos;</span><br></pre></td></tr></table></figure>
-<p>4.声明对象: 类名(参数)</p>
-<p>通过类创建对象：会自动调用类的<strong> init </strong>方法去初始化对象的属性<br>类名(参数)，这个参数有没有，有就去<strong> init </strong>方法中看</p>
-<p>通过Person类，创建了一个对象p1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1 = Person(&apos;张三&apos;)</span><br></pre></td></tr></table></figure>
-<p>创建完对象后，就可以通过对象获取对象属性 : （对象.属性名）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(p1.name)   # 执行结果： 张三</span><br></pre></td></tr></table></figure>
-<p>通过对象给属性赋值 通过对象去调用对象方法(也叫给对象发送消息)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1.age = 10</span><br><span class="line">print(p1.age)    # 执行结果： 10</span><br></pre></td></tr></table></figure>
-<p>通过对象去调用对象方法(也叫给对象发送消息)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1.run()          # 执行结果： 张三 跑起来</span><br></pre></td></tr></table></figure>
-<p>5.一个类可以拥有多个对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p2 = Person()</span><br><span class="line">p2.name = &apos;LuoHao&apos;</span><br><span class="line">p2.age = 34</span><br><span class="line">p2.gender = &apos;男&apos;</span><br><span class="line">p2.run()           # 执行结果：LuoHao 跑起来</span><br></pre></td></tr></table></figure>
-
-      
     </div>
     
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
   </div>
-</article>
-
-
-
-
-
-  <article class="post">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:10.937Z"><a href="/2018/07/29/Python3基础/第十三天Python3类与对象/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十三天Python3类与对象/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>[TOC]</p>
-<p>#类和对象（1） </p>
-<h1 id="1-类与对象的定义"><a href="#1-类与对象的定义" class="headerlink" title="1. 类与对象的定义"></a>1. 类与对象的定义</h1><p>类：具有相同属性和功能的对象的集合；是抽象的<br>对象：类的实例；具体的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说 [人]是一个[类]     [张三]、[李四]就是[人]的[对象]</span><br><span class="line">如果说[电脑]是一个[类]    [我桌上这台电脑]、[你正在使用的电脑]就是[电脑]的[对象]</span><br></pre></td></tr></table></figure></p>
-<p>##1.1 类的声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class 类名(父类):         class 类名:</span><br><span class="line">    属性                       属性</span><br><span class="line">    方法                       方法</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>1.class : python中声明类的关键字</li>
-<li>2.类名：标识符，1.首字母大写！！！   2.见名知义</li>
-<li>3.冒号：固定格式 </li>
-<li>4.属性: 分类的字段和对象的字段    —–&gt; 属性</li>
-<li>5.方法: 对象方法(构造方法)、类方法、静态函数  ——&gt; 功能</li>
-</ul>
-<p>方法：就是声明在类中的函数(都有一个默认参数self，不需要调用的时候给他传值)<br>对象方法: 在类中直接声明的函数,带一个参数self;要使用对象来调用</p>
-<p>声明类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人类&quot;&quot;&quot;   # 类的说明文档</span><br><span class="line">    # 在类中声明了eat方法，默认有一个参数self,调用eat方法的时候，不需要给self传参</span><br><span class="line">    # 在类中直接声明的函数都是对象方法，对象方法必须使用对象来调用</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&apos;吃饭~&apos;)</span><br><span class="line">    # 直接写在类中函数，必须带参数self</span><br><span class="line">    # def run(self):</span><br><span class="line">    #     print(&apos;aaa&apos;)</span><br><span class="line">    # 注意：如果要在类中声明带参的对象方法，那么其他的参数必须写在self的后面</span><br><span class="line">    def run(self, num):</span><br><span class="line">        print(&apos;跑了%d米&apos;% (num))</span><br></pre></td></tr></table></figure></p>
-<p>创建对象 ： 变量 = 类（）  如：p1 = Person()<br>调用对象方法：变量.方法  如： p1.eat()<br>一个类可以创建多个对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># p1就是Person类的一个实例（对象）</span><br><span class="line"># 可以通过对象去调用类中的对象方法、和使用类中声明的对象属性(字段)</span><br><span class="line">p1 = Person()</span><br><span class="line"># 调用对象方法</span><br><span class="line">p1.eat()</span><br><span class="line">p1.run(100)</span><br><span class="line"># 一个类可以创建多个对象</span><br><span class="line">p2 = Person()</span><br><span class="line">p2.eat()</span><br><span class="line">p2.run(80)</span><br></pre></td></tr></table></figure>
-<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">	&apos;&apos;&apos;说明文档&apos;&apos;&apos;</span><br><span class="line">	def eat(self):</span><br><span class="line">		print(&apos;吃饭&apos;)</span><br><span class="line">	def run(self,run): #self是自带参数，run设置的参数必须有值</span><br><span class="line">		print(&apos;跑了%d米&apos;%(num))</span><br><span class="line">p1 = Person()</span><br><span class="line">p1.eat()</span><br><span class="line">p1.run(100)</span><br></pre></td></tr></table></figure></p>
-<p>##1.2 对象属性和init方法</p>
-<p>实例一：init方法会自动被调用<br>init方法又叫构造方法。是在通过类创建对象的时候，自动调用的方法。<br>init方法的作用就是在创建对象的时候初始化对象的属性<br>init：对象的属性就是声明在这个方法中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    # __init__方法又叫构造方法。是在通过类创建对象的时候，自动调用的方法。</span><br><span class="line">    # __init__方法的作用就是在创建对象的时候初始化对象的属性</span><br><span class="line">    # __init__：对象的属性就是声明在这个方法中</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 在这个地方声明对象的属性。。。。</span><br><span class="line">        print(&apos;这个是init&apos;)</span><br><span class="line"></span><br><span class="line"># 在声明对象的时候会自动调用init方法</span><br><span class="line">p1 = Person()</span><br><span class="line">p2 = Person()</span><br></pre></td></tr></table></figure>
-<p>实例二：带参init方法</p>
-<p>init的方法的方法名固定:<strong> init </strong><br>但是参数是可以随意改变的(但是self参数不变)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # init的方法的方法名固定:__init__。但是参数是可以随意改变的(但是self参数不变)</span><br><span class="line">    def __init__(self, name=&apos;&apos;):</span><br><span class="line">        print(&apos;名字是:%s&apos;% (name))</span><br><span class="line"># 通过类创建对象的时候，要保证init方法里面的每一个参数都有值。通过给类名后面的括号里传参来保证</span><br><span class="line">dog1 = Dog(&apos;财财&apos;)</span><br><span class="line">dog2 = Dog(name=&apos;旺财&apos;)#关键字参数name= 传值 &apos;旺财&apos;</span><br><span class="line">dog3 = Dog()#参数有默认值  </span><br><span class="line"># 如果参数没有默认值 会报错</span><br><span class="line"># TypeError: __init__() missing 1 required positional argument: &apos;name&apos;</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">名字是:财财</span><br><span class="line">名字是:旺财</span><br><span class="line">名字是:</span><br></pre></td></tr></table></figure>
-<p>实例三：对象属性</p>
-<p>属性：声明在类中的变量<br>对象属性: 要通过对象去使用；不同的对象可能会有不同的值；声明在init方法中的变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person2:</span><br><span class="line">    &quot;&quot;&quot;人类&quot;&quot;&quot;</span><br><span class="line">    # 在init方法中声明对象属性: self.属性名 = 初值</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 声明一个对象属性name, 初始值为空串</span><br><span class="line">        self.name = &apos;无名氏&apos;</span><br><span class="line">        # 声明一个对象属性age, 初始值为10</span><br><span class="line">        self.age = 10</span><br><span class="line"># 通过Person2类创建对象p1</span><br><span class="line">p1 = Person2()</span><br><span class="line"># 通过p1对象去修改p1的name属性</span><br><span class="line">p1.name = &apos;张三&apos;</span><br><span class="line"># 通过对象去使用对象属性</span><br><span class="line">print(p1.name)</span><br><span class="line">p2 = Person2()</span><br><span class="line">p2.name = &apos;李四&apos;</span><br><span class="line">print(p2.name)</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">张三</span><br><span class="line">李四</span><br></pre></td></tr></table></figure>
-<p>练习: 声明一个学生类，拥有属性:名字、年龄、电话。 拥有方法: 学习</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Student:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.name = &apos;张三&apos;</span><br><span class="line">        self.age = 0</span><br><span class="line">        self.tel = &apos;110&apos;</span><br><span class="line">    def study(self):</span><br><span class="line">        print(&apos;好好学习，天天向上&apos;)</span><br><span class="line">stu1 = Student()</span><br><span class="line">stu1.name = &apos;李四&apos;</span><br><span class="line">print(stu1.name, stu1.age, stu1.tel)</span><br><span class="line"># 调用对象方法(给对象发送消息)</span><br><span class="line">stu1.study()</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">李四 0 110</span><br><span class="line">好好学习，天天向上</span><br></pre></td></tr></table></figure>
-<p>实例四：创建对象的时候赋初值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 实例四：创建对象的时候赋初值</span><br><span class="line">class Student2:</span><br><span class="line">    def __init__(self, name1=&apos;&apos;, age1=0, tel1=&apos;&apos;):</span><br><span class="line">        self.name = name1</span><br><span class="line">        self.age = age1</span><br><span class="line">        self.tel = tel1</span><br><span class="line"># 在创建对象的时候给对象属性赋初值</span><br><span class="line">stu2 = Student2(&apos;小明&apos;, 18, &apos;112&apos;)</span><br><span class="line">print(stu2.name)</span><br><span class="line">stu3 = Student2(name1=&apos;小王&apos;)</span><br><span class="line">print(stu3.name)</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">小明</span><br><span class="line">小王</span><br></pre></td></tr></table></figure>
-<p>##1.3 self</p>
-<p>类中的对象方法都有一个默认参数self:</p>
-<ol>
-<li>调用带有默认参数self的方法，不需要给self传参。系统会自动将调用当前方法的对象传给self</li>
-<li>在方法中使用self就相当于使用调用方法的对象（只能使用self，不能重新给self赋值）</li>
-</ol>
-<p>创建一个类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        # 声明对象属性</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&apos;吃饭&apos;)</span><br><span class="line">    #  声明一个对象方法run</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;self&apos;,self)</span><br><span class="line">        # 在对象方法中使用对象的属性，直接用self去获取属性</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br></pre></td></tr></table></figure>
-<p>通过对象p1去调用run方法，系统会将self=p1<br>这个时候在run方法中，p1和self是一个东西</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1.run()</span><br><span class="line">print(&apos;p1&apos;, p1)</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self &lt;__main__.Person object at 0x004EB2D0&gt;</span><br><span class="line">小明跑起来</span><br><span class="line">p1 &lt;__main__.Person object at 0x004EB2D0&gt;</span><br></pre></td></tr></table></figure>
-<p>从存储的角度来看 变量p1 和 self 存储地址都是一样的 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        # 声明对象属性</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    def eat(self):</span><br><span class="line">    	print(&apos;self&apos;,self)</span><br><span class="line">        print(&apos;吃饭&apos;)</span><br><span class="line"></span><br><span class="line">    #  声明一个对象方法run</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;self&apos;,self)</span><br><span class="line">        # 在对象方法中使用对象的属性，直接用self去获取属性</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br><span class="line">        # self.eat()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 创建一个Person对象</span><br><span class="line">p1 = Person(&apos;小明&apos;, 10)</span><br><span class="line"># eat中的self = p2</span><br><span class="line">p2 = Person(&apos;小红&apos;, 20)</span><br><span class="line">p2.run()</span><br></pre></td></tr></table></figure>
-<p>结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self &lt;__main__.Person object at 0x01DF3630&gt;</span><br><span class="line">小红跑起来</span><br><span class="line">self &lt;__main__.Person object at 0x01DF3630&gt;</span><br><span class="line">吃饭</span><br></pre></td></tr></table></figure>
-<p>练习:声明一个圆类， 拥有属性：半径  拥有方法: 计算圆的面积、计算圆的周长</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line">class Circle:</span><br><span class="line">    &quot;&quot;&quot;圆&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, radius=0):</span><br><span class="line">        self.radius = radius</span><br><span class="line">    # 在对象方法中可以通过self去使用对象属性</span><br><span class="line">    def area(self):</span><br><span class="line">        return pi*(self.radius**2)</span><br><span class="line">    def girth(self):</span><br><span class="line">        return 2 * pi * self.radius</span><br><span class="line">c1 = Circle(10)</span><br><span class="line">print(&apos;%.2f&apos;% c1.area())</span><br><span class="line">print(&apos;%.2f&apos;% c1.girth())</span><br><span class="line"></span><br><span class="line">c2 = Circle(3)</span><br><span class="line">print(c2.area())</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">314.16</span><br><span class="line">62.83</span><br><span class="line">28.274333882308138</span><br></pre></td></tr></table></figure>
-<p>##1.4  对象属性的增删改查</p>
-<p>先创建一个类和对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # Dog类有name和age两个属性</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">dog1 = Dog(&apos;旺财&apos;)</span><br></pre></td></tr></table></figure></p>
-<p>###1.4.1  查<br>方式1: 对象.属性<br>特点:如果属性存在就获取属性的值。如果属性不存在就会报AttributeError错误</p>
-<p>方式2：getattr(对象, 属性名, 默认值) –&gt; 获取指定对象的指定属性<br>如果不设置默认值： 属性如果存在就获取属性的值；不存在就报错<br>如果设置默认值：属性如果存在就获取属性的值；属性不存在的时候，不报错，并将默认值作为结果</p>
-<p>方式3：对象.<strong> getattribute </strong>(属性名)<br>获取指定对象的指定属性。如果属性不存在就会报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(dog1.name)</span><br><span class="line"># print(dog1.score)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;score&apos;</span><br><span class="line"></span><br><span class="line">print(getattr(dog1, &apos;name&apos;, None))</span><br><span class="line">print(getattr(dog1, &apos;score&apos;, None))</span><br><span class="line"></span><br><span class="line">print(dog1.__getattribute__(&apos;name&apos;))</span><br><span class="line"># print(dog1.__getattribute__(&apos;sex&apos;))  # AttributeError</span><br></pre></td></tr></table></figure>
-<p>###1.4.2  改（修改）<br>方式1: 对象.存在的属性 = 新值<br>方式2：setattr(对象, 属性名, 新值)<br>方式3：对象.<strong> setattr </strong>(属性名, 新值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dog1.name = &apos;大黄&apos;</span><br><span class="line">print(dog1.name)</span><br><span class="line"></span><br><span class="line">setattr(dog1, &apos;name&apos;, &apos;小黄&apos;)</span><br><span class="line">print(dog1.name)</span><br><span class="line"></span><br><span class="line">dog1.__setattr__(&apos;name&apos;, &apos;小黑&apos;)</span><br><span class="line">print(dog1.name)</span><br></pre></td></tr></table></figure></p>
-<p>###1.4.3  增（添加）<br>python中可以动态的给对象添加属性<br>方式1：对象.不存在的属性 = 值<br>方式2：setattr(对象, 不存在的属性名, 新值)<br>方式3：对象.<strong> setattr </strong>(不存在的属性名, 新值)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dog1.sex = &apos;男&apos;</span><br><span class="line">print(dog1.sex)</span><br><span class="line"></span><br><span class="line">setattr(dog1, &apos;score&apos;, 100)</span><br><span class="line">print(dog1.score)</span><br></pre></td></tr></table></figure>
-<p>###1.4.4 删除属性<br>方式1：del 对象.属性<br>方式2：delattr(对象, 属性名)<br>方式3：对象.<strong> delattr </strong>(属性名)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># del dog1.age</span><br><span class="line"># print(dog1.age)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;age&apos;</span><br><span class="line"></span><br><span class="line"># delattr(dog1, &apos;age&apos;)</span><br><span class="line"># print(dog1.age)  # AttributeError: &apos;Dog&apos; object has no attribute &apos;age&apos;</span><br><span class="line"></span><br><span class="line">dog1.__delattr__(&apos;age&apos;)</span><br><span class="line"># print(dog1.age)</span><br></pre></td></tr></table></figure></p>
-<p>###1.4.5 判断对象是否拥有某个属性<br>方式：hasattr(对象, 属性名)  —&gt; 判断指定的对象是否拥有指定的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = hasattr(dog1, &apos;name&apos;)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
-<p>实例1：对象属性的操作只对当前那一个对象有效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0, id_num=&apos;&apos;, sex=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.id_num = id_num</span><br><span class="line">        self.sex = sex</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p1 = Person(&apos;小明&apos;, 10)</span><br><span class="line"># 给不存在的属性赋值，就是添加属性</span><br><span class="line">p1.score = 100</span><br><span class="line">print(p1.score+100)</span><br><span class="line"></span><br><span class="line">del p1.name</span><br><span class="line"># print(p1.name)</span><br><span class="line"></span><br><span class="line">p2 = Person(&apos;张三&apos;, 30)</span><br><span class="line">print(p2.name)</span><br><span class="line"># print(p2.score)  # AttributeError: &apos;Person&apos; object has no attribute &apos;score&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 注意：1.对对象属性的增、删、改、查是针对指定的那个一个对象。不会影响其他的对象</span><br><span class="line">#      2.实际开发用的时候，一般只用获取对象属性的值和修改对象属性的值。想要添加和删除属性，一般都是在init方法中去操作</span><br></pre></td></tr></table></figure>
-<p>实例二：防止不必要的属性被添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;狗&quot;&quot;&quot;</span><br><span class="line">    # 通过给__slots__赋值，可以限制类中对象的属性有哪些，防止一个不必要的属性被添加</span><br><span class="line">    __slots__ = (&apos;name&apos;, &apos;age&apos;, &apos;color&apos;)</span><br><span class="line"></span><br><span class="line">    def __init__(self, name=&apos;&apos;, age=0, color=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.color = color</span><br><span class="line">        # self.sex = &apos;男&apos;  # AttributeError，因为__slots__中没有&apos;sex&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dog1 = Dog(&apos;笑话&apos;, 3, &apos;Yellow&apos;)</span><br><span class="line"># dog1.name1 = &apos;大黄&apos;</span><br><span class="line"># dog1.sex = &apos;男&apos;</span><br><span class="line"></span><br><span class="line">del dog1.name</span><br><span class="line"># 注意：__slots__中规定的属性，只能少不能多。删除属性是不受影响的</span><br></pre></td></tr></table></figure>
-<p>注意：<strong> slots </strong>中规定的属性，只能少不能多。删除属性是不受影响的</p>
-<h2 id="1-5-内置类属性"><a href="#1-5-内置类属性" class="headerlink" title="1.5 内置类属性"></a>1.5 内置类属性</h2><p>先创建一个类和对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Dog:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    狗:狗有name、age、color等属性</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    def __init__(self,name=&apos;&apos;,age=0, color=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.color = color</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;%s跑起来&apos;% (self.name))</span><br><span class="line"></span><br><span class="line">    def shout(self):</span><br><span class="line">        print(&apos;%s在叫唤&apos;% (self.name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dog = Dog()</span><br></pre></td></tr></table></figure>
-<p>下列一些常用类属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 内置的类属性是属于类的，需要通过类去使用</span><br><span class="line"></span><br><span class="line"># 1.类.__name__ : 获取类的名字(只有类有这个属性)</span><br><span class="line">class_name = Dog.__name__  # &apos;Dog&apos;</span><br><span class="line">print(class_name, type(class_name))</span><br><span class="line"></span><br><span class="line"># 2.类.__doc__ : 获取类的说明文档</span><br><span class="line">print(Dog.__doc__)</span><br><span class="line"></span><br><span class="line"># 3.__dict__</span><br><span class="line"># 类.__dict__ : 获取类中所有的类属性(类字段)和对应的值的键值对 --&gt; 结果是字典</span><br><span class="line"># 对象.__dict__ : 以键值对的形式获取指定对象的所有的属性和值</span><br><span class="line">print(Dog.__dict__)</span><br><span class="line"></span><br><span class="line">dog.sex = &apos;男&apos;</span><br><span class="line">print(dog.__dict__)</span><br><span class="line"></span><br><span class="line"># 4. 类.__module__ : 获取类所在的模块的名字</span><br><span class="line">print(Dog.__module__, __name__)</span><br><span class="line"></span><br><span class="line"># 5. 类.__bases__ : 获取指定类的基类</span><br><span class="line">print(Dog.__bases__)</span><br></pre></td></tr></table></figure>
-<h1 id="练习-：-将json文件中的内容-放入对象中"><a href="#练习-：-将json文件中的内容-放入对象中" class="headerlink" title="练习 ： 将json文件中的内容 放入对象中"></a>练习 ： 将json文件中的内容 放入对象中</h1><p>准备工作<br>新建一个项目<br>新建一个Python File  和 一个 名为student的json文件 （student.json）里面存入以下内容。请确保 Python File 和 （student.json）在同一项目文件中</p>
-<p>需要掌握的内容 </p>
-<p>文件的打开 读取</p>
-<p>数据的处理</p>
-<p>列表、字典的</p>
-<p>函数的建立 和调用</p>
-<p>模块的导入</p>
-<p>类和对象的基本运用</p>
-<p>（student.json）文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;&quot;name&quot;:&quot;路飞&quot;, &quot;age&quot;:17, &quot;sex&quot;:&quot;男&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;娜美&quot;, &quot;age&quot;:18, &quot;sex&quot;:&quot;女&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;索罗&quot;, &quot;age&quot;:23, &quot;sex&quot;:&quot;男&quot;&#125;,</span><br><span class="line">  &#123;&quot;name&quot;:&quot;乔巴&quot;, &quot;age&quot;:10, &quot;sex&quot;:&quot;男&quot;&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>Python file 文件 名：练习.py</p>
-<p>编程思想：</p>
-<p>首先你要获取  （student.json）文件内容 (打开文件 ，读取文件内容，关闭文件)（方法 ）</p>
-<p>这里要用到json模块的导入操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#模块的导入2两种方法</span><br><span class="line">#1  模块导入:  import json     调用: json.load(打开的文件)</span><br><span class="line">#2  导入: from json import load  调用:  load(打开的文件)</span><br><span class="line">#打开文件读取文件的简化操作</span><br><span class="line">with open（文件路径，&apos;r&apos;（读的打开文件模式），encodeing=&apos;utf-8&apos;(编码方式)） as f(变量):</span><br><span class="line">#with open()  as 把open函数的返回值 赋值 给变量 f</span><br><span class="line"></span><br><span class="line">便于理解</span><br><span class="line">f = open(&apos;test.txt&apos;,&apos;r&apos;,encoding=&apos;utf-8&apos;)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">read() 读取的是字符串 适用于文本 load（）json文件是什么数据结构 读出来就是什么数据结构（字典、列表、字符串）</span><br></pre></td></tr></table></figure>
-<p>这里定义一个函数 （获取  json 文件里的数据） 作用就是便于调用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 导入json模块中load（）</span><br><span class="line">from json import load</span><br><span class="line"># 定义一个名为get_json_data的函数</span><br><span class="line">def get_json_data():</span><br><span class="line">	with open(&apos;student.json&apos;,&apos;r&apos;,encodeing=&apos;utf-8&apos;) as f:</span><br><span class="line">		return load(f)    ## load(f):读的结果</span><br></pre></td></tr></table></figure>
-<p>拿到了数据 就要把它对象化处理 所以要声明一个类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 声明类</span><br><span class="line">class Person:</span><br><span class="line">    &quot;&quot;&quot;人物&quot;&quot;&quot;</span><br><span class="line">	#这里这样定义 给参数设置默认参数 就是等数据生成对象的时候可以赋值给对象属性</span><br><span class="line">    def __init__(self,name=&apos;&apos;, age=0, sex=&apos;&apos;):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.sex = sex</span><br></pre></td></tr></table></figure>
-<p>然后就是数据的处理了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def main():</span><br><span class="line">    all_data =get_json_data()</span><br><span class="line">    clube=[]</span><br><span class="line">    for item in all_data:#item 字典</span><br><span class="line">        # 将字典中的每个键值对 对应的值 存到对象催要的属性中</span><br><span class="line">        #  开发中</span><br><span class="line">        p=Person()</span><br><span class="line">        for key in item:  #遍历字典里的key:value</span><br><span class="line">            setattr(p,key,item[key])</span><br><span class="line">            print(p.__dict__,key,item[key])</span><br><span class="line">        clube.append(p)</span><br><span class="line">        print(p.__dict__)</span><br><span class="line">    for item in clube:</span><br><span class="line">        print(item.name,item.__dict__)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:32:05.297Z"><a href="/2018/07/29/Python3基础/第十一天Python3文件读写/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第十一天Python3文件读写/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><p>文件都有后缀（保存书籍永久性）<br>文件特点：都有文件后缀名 （TXT ，MV,exe，音频文件）<br>不同的后缀表示不同的存储方式</p>
-<p>文本文件（）<br>二进制文件：视频，音频、图片（.mp4, .mov .avi  .mp3 .jpj ）<br>可执行文件 – exe  ,  .api   ,  .dmg 等</p>
-<h2 id="文件的打开、关闭、读、写操作"><a href="#文件的打开、关闭、读、写操作" class="headerlink" title="文件的打开、关闭、读、写操作"></a>文件的打开、关闭、读、写操作</h2><p>##1文件操作(对文件进行读写)</p>
-<p>打开文件格式：<br>1.文件操作就是  打开  看 该 到===<br>2.对文件进行读写操作 *（获取内容 ）（修改、写入）<br>3.关闭文件<br>代码操作文件的读写操作（Python）</p>
-<p>##python操作文件</p>
-<p>###打开文件</p>
-<p>open(路径  ，打开的模式)<br>文件路径：文件正在电脑中的对应的地址)<br>打开的的模式：（’r‘）读的方式打开，这能获取内容，不能修改例题的；（’w’,’a’） 以修改的形式打开  是能修改文件内容，不能获取文件内容</p>
-<p>open 函数  有一个返回值 ：返回的就是 被打开的文件句柄对象<br>文件句柄：就是文件的代言人，对文件句柄对象进行的操作 ，就相当于对文件进行操作</p>
-<p>文件路径：文件在电脑中对应的地址<br>1.直接写全路径(不推荐使用)  /Users/yuting/Desktop/JAVA/授课/Python1803/文件操作/bb.txt<br>2.一般将涉及到的文件放到工程中：<br>a. 文件和代码对应的.py文件在一个目录下面：路径直接写文件名<br>b. 在工程文件夹下，但是不直接和代码文件在一个目录里面: ./放文件的文件夹名字/文件名</p>
-<p>打开的模式: ‘r’-&gt;文本读（以读的形式打开，只能获取内容，不能修改文件内容）<br>           ‘w’-&gt;文本写 (以写的形式打开，只能修改文件内容，不能获取文件内容)<br>           ‘a’-&gt;文本写<br>           ‘br’-&gt;二进制读<br>           ‘bw’-&gt;二进制写<br>           ‘ba’-&gt;二进制写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># br  ，bw   ba 二进制读写写</span><br><span class="line"># 文本文件</span><br><span class="line"># a 打开文件</span><br><span class="line"># f 就是被他开的文件对应的文件句柄</span><br><span class="line">f = open(&apos;./text.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line"># 关闭文件</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-<h2 id="文件的读取"><a href="#文件的读取" class="headerlink" title="文件的读取"></a>文件的读取</h2><p>read(): 获取文件中所有的内容，并且返回<br>readline(): 每次读一行内容，并且返回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># b.读操作</span><br><span class="line"># 注意：对同一个文件句柄对象进行读操作，每读一次内容，下次再读的时候，从上次读的结束的位置往下读</span><br><span class="line"># read(): 获取文件中所有的内容，并且返回</span><br><span class="line"># 文本文件读取的结果是字符串</span><br><span class="line"># reslut = f.read()</span><br><span class="line"># print(reslut, type(reslut))</span><br><span class="line"># read(n): n-&gt;指定读取的文本长度（-1：读全部内容， n大于长度：读取所有内容）</span><br><span class="line"># result = f.read(20000)</span><br><span class="line"># print(result)</span><br><span class="line"># readline(): 每次读一行内容</span><br><span class="line"># reslut = f.readline()</span><br><span class="line"># reslut = f.readline()</span><br><span class="line"># print(&apos;===&apos;, reslut, &apos;~~~&apos;)</span><br><span class="line"># readlines(): 让文件中所有的内容读出来(将每一行的内容作为列表的元素返回的)</span><br><span class="line">result = f.readlines()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
-<h2 id="修改读取的位置"><a href="#修改读取的位置" class="headerlink" title="修改读取的位置"></a>修改读取的位置</h2><p>f.seek()  seek(偏移量) 注意：偏移量一般设置为0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 读文件，每次读完，下次在读的时候，是接着上次读完的位置往下进行读操作</span><br><span class="line"># 避免这个问题的方法：1重新打开文件，然后再读   2.设置读写位置</span><br><span class="line">f = open(&apos;text.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)#utf-8是（1到6字节）</span><br><span class="line"># 读取问价所有的内容,下次再读就是从文件结束的位置往后读</span><br><span class="line">print(f.read())</span><br><span class="line"># seek(偏移量)（偏移量）是字节（一个字母是一个字节，一个中文汉字是两个字节）</span><br><span class="line"># 设置读写位置为文件的开始：后面进行读操作的时候，就是从文件开始的位置往后读</span><br><span class="line"># 注意：偏移量一般设置为0</span><br><span class="line">f.seek()</span><br><span class="line">f.close()</span><br><span class="line"># 文本文件的内容，对应的就是字符串</span><br><span class="line"># 读操作</span><br><span class="line"># 注意: 如果文件的路径写错了会报：FileNotFoundError</span><br><span class="line">f = open(&apos;test.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-<h2 id="文本文件的写操作"><a href="#文本文件的写操作" class="headerlink" title="文本文件的写操作"></a>文本文件的写操作</h2><p>写操作(修改文件内容)<br>w(写的内容)：文本文件中学的内容值字符<br>a 在原来的内容后面去追加内容<br>注意：’w’、’a’打开文件，如果这个文件不存在，会创建一个新的文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line"># 写操作（修改文件内容）</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">1.打开文件</span><br><span class="line">2.写操作（修改文件内容）</span><br><span class="line">3.关闭</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">f= open(&apos;text.txt&apos;,&apos;a&apos;,encoding=&apos;utf-8&apos;)</span><br><span class="line"># write(写的内容)：文本文件中学的内容值字符串</span><br><span class="line"># 注意：写的时候覆盖源文件的内容  w</span><br><span class="line"># a 在原来的内容后面去追加内容</span><br><span class="line">f.write(&apos;举头望明月&apos;)</span><br><span class="line">print(f.write(&apos;举头望明月&apos;))</span><br><span class="line"># print(f.read())</span><br><span class="line">f.seek(0)#后面写的时候，会以覆盖前面写的内容的形式去写</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"># 写操作</span><br><span class="line"># 注意：&apos;w&apos;、&apos;a&apos;打开文件，如果这个文件不存在，会创建一个新的文件</span><br><span class="line">f1 = open(&apos;test1.txt&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">f1.write(&apos;1234567&apos;)</span><br><span class="line">f1.close()</span><br><span class="line">f1 = open(&apos;test2.txt&apos;, &apos;a&apos;, encoding=&apos;utf-8&apos;)</span><br><span class="line">f1.write(&apos;1234567&apos;)</span><br><span class="line">f1.close()</span><br><span class="line"># 在python中可以使用以下结构来进行文件操作过程:</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">with open() as 文件变量:</span><br><span class="line">    在文件打开后关闭前执行的代码段</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">with open(&apos;test.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    print(f.read())</span><br></pre></td></tr></table></figure>
-<p>##二进制文件的读写</p>
-<p>read()<br>‘bw’</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 二进制文件的读</span><br><span class="line"># bytes类: python中的二进制数据对应的类型是bytes --&gt; data</span><br><span class="line">with open(&apos;./files/chuangxu.png&apos;, &apos;br&apos;) as f:</span><br><span class="line">    data = f.read()</span><br><span class="line">    print(&apos;===:&apos;,type(data))</span><br><span class="line">    # print(reslut)</span><br><span class="line"># 二进制文件的写</span><br><span class="line"># &apos;ba&apos;：无追加效果</span><br><span class="line">with open(&apos;./files/new.png&apos;, &apos;bw&apos;) as f:</span><br><span class="line">    # data需要是bytes类型的数据</span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
-<h2 id="JSON文件的读写"><a href="#JSON文件的读写" class="headerlink" title="JSON文件的读写"></a>JSON文件的读写</h2><p>json文件: 就是后缀是.json的文件，用来存储文本数据(以特殊的语法结构来存储文本信息)</p>
-<p>最外层要么是字典结构，要么是数组(列表)结构<br>里面的数据：字符串、数字、二进制、字典、数组(列表)<br>{} -&gt; 字典结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;:&quot;aa&quot;,</span><br><span class="line">    &quot;age&quot;:18,</span><br><span class="line">    &quot;score&quot;:[100, 90, 80]    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>[] -&gt; 数组(列表)结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    100,</span><br><span class="line">    &quot;name&quot;,</span><br><span class="line">    &quot;person&quot;:&#123;&quot;name&quot;:&quot;张三&quot;, &quot;age&quot;:30&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>“” -&gt; 字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;</span><br><span class="line">name ,sfjk,&#123;ksjjdk&#125;,kksjkjk</span><br><span class="line">&quot;</span><br></pre></td></tr></table></figure>
-<p>json文件的读写:python中使用python内置模块json来对json数据进行操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br></pre></td></tr></table></figure>
-<p>读取json文件中的内容<br>json.load(f)：读的结果只有两种情况：要么是字典、要么是列表.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">with open(&apos;./files/myjson.json&apos;,&apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    result = json.load(f)</span><br><span class="line">    print(type(result))</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure>
-<p>json文件的写操作:<br>son.dump(写的内容,f): 写的内容只能是字典或者列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">with open(&apos;./files/myjson.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    # dict1 = &#123;&apos;aaa&apos;: 100, &apos;score&apos;: 99, &apos;person&apos;: &#123;&apos;name&apos;:&apos;王海飞&apos;, &apos;age&apos;:30&#125;&#125;</span><br><span class="line">    # json.dump(dict1, f)</span><br><span class="line">    # list1 = [10, 20, &apos;a&apos;, &apos;abc&apos;]</span><br><span class="line">    # json.dump(list1, f)</span><br><span class="line">    tuple1 = (10, 20, &apos;abc&apos;)  # 写进去还是列表</span><br><span class="line">    json.dump(tuple1, f)</span><br><span class="line">    # json.dump(&apos;abcnd&apos;, f)</span><br></pre></td></tr></table></figure>
-<h2 id="异常捕获"><a href="#异常捕获" class="headerlink" title="异常捕获"></a>异常捕获</h2><p>在之前的学习中，由于各种原因，我们的代码会出现各种各样的错误(ValueError，FileNotFoundError，IndexError,KeyError)<br>这些错误我们叫异常，如果程序出现异常，程序会奔溃，不能继续执行。<br>但是，有的时候出现异常，我们可能希望由自己解决出现异常的问题，不希望程序崩溃，就可以捕获异常。</p>
-<p>捕获异常:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">格式1</span><br><span class="line">try:</span><br><span class="line">    代码块1（需要捕获异常的代码块） </span><br><span class="line">except:</span><br><span class="line">    代码块2（出现异常后执行的）</span><br><span class="line">    </span><br><span class="line">执行过程：先执行代码块1，如果执行代码块1的时候出现异常，就执行代码块2；</span><br><span class="line">如果代码块1不出现异常，就执行try结构外的其他语句</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">try:</span><br><span class="line">    print(int(&apos;12sd&apos;))</span><br><span class="line">    # with open(&apos;./files/test1.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    #     pass</span><br><span class="line">except:</span><br><span class="line">    print(&apos;出现异常了&apos;)</span><br><span class="line"></span><br><span class="line">print(&apos;aaa&apos;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">格式2：</span><br><span class="line">try:</span><br><span class="line">    代码块1</span><br><span class="line">except 错误类型列表:</span><br><span class="line">    代码块2</span><br><span class="line">出现指定错误类型的异常，才捕获</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">try:</span><br><span class="line">    a = [1, 2, 3]</span><br><span class="line">    print(a[10])</span><br><span class="line">    # with open(&apos;./files/test1.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    #     pass</span><br><span class="line">except FileNotFoundError:</span><br><span class="line">    print(&apos;出现文件找不到异常&apos;)</span><br><span class="line">except ValueError:</span><br><span class="line">    print(&apos;值错误异常&apos;)</span><br><span class="line">except:</span><br><span class="line">    print(&apos;其他异常出现&apos;)</span><br><span class="line">finally:</span><br><span class="line">    print(&apos;不管有没有异常都要执行&apos;)</span><br><span class="line">print(&apos;aaa&apos;)</span><br></pre></td></tr></table></figure>
-<p>练习：学生信息持久化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line"># 写一个添加学生的功能，将添加的学生信息持久化</span><br><span class="line"># 1.添加学生</span><br><span class="line"># 2.查看学生</span><br><span class="line">key_name = &apos;name&apos;</span><br><span class="line">key_age = &apos;age&apos;</span><br><span class="line">key_tel = &apos;tel&apos;</span><br><span class="line"># all_students = &#123;&#125;</span><br><span class="line">try:</span><br><span class="line">    with open(&apos;./files/student1.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">        all_students = json.load(f)</span><br><span class="line">except FileNotFoundError:</span><br><span class="line">    all_students = &#123;&#125;</span><br><span class="line"># 输入学生信息</span><br><span class="line">stu_name = input(&apos;请输入学生姓名:&apos;)</span><br><span class="line">stu_age = input(&apos;请输入学生的年龄:&apos;)</span><br><span class="line">stu_tel = input(&apos;请输入学生的电话:&apos;)</span><br><span class="line"># 一个学生对应一个字典，多个学生用一个字典存起来</span><br><span class="line">stu_dict = &#123;</span><br><span class="line">    key_name: stu_name,</span><br><span class="line">    key_age: stu_age,</span><br><span class="line">    key_tel: stu_tel</span><br><span class="line">&#125;</span><br><span class="line"># 保存学生信息</span><br><span class="line">all_students[stu_name] = stu_dict</span><br><span class="line"># 保存到本地</span><br><span class="line">with open(&apos;./files/student1.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as f:</span><br><span class="line">    json.dump(all_students, f)</span><br><span class="line">print(all_students)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:31:58.699Z"><a href="/2018/07/29/Python3基础/第六天Python3基本语法List/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第六天Python3基本语法List/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>[TOC]</p>
-<p>#1.list 列表<br>python中的数据类型:数字(不可变)、字符串(不可变)、列表(可变)、元祖(不可变)、字典(可变)、集合(不可变)<br>容器类型的数据: 列表(list)、元祖、字典、集合 (序列)<br>列表（数组）：一个列表中可以存储多个不同类型的数据。<br>列表存储数据的方式：将多个数据放到一个 “[]” 中，多个数据之间用逗号隔开。<br>列表的特点：列表的是可变的（指的是列表中元素的值和个数可变）<br>“[]”: 是列表的标志</p>
-<p>##1.1声明一个列表<br>声明一个列表list1,里面有5个元素，分别是 1， 2， 3， 10.9，‘abc’</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 10.9, &apos;abc&apos;]</span><br><span class="line">	pint(list1)</span><br></pre></td></tr></table></figure>
-<p>执行代码结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3, 10.9, &apos;abc&apos;]</span><br></pre></td></tr></table></figure>
-<p>还可以声明一个空的列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lists = []</span><br><span class="line">print(lists)</span><br></pre></td></tr></table></figure>
-<p>执行代码结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br></pre></td></tr></table></figure>
-<p>##1.2获取列表中的元素<br>方法1：获取单个元素（通过元素对应的下标）。<br>下标的取值范围：正取：0 ~ （len(list)-1）/（元素个数-1）； 反取：-1 ~ （len(list)-1）/-元素个数。<br>注意：通过下标获取元素的时候，下标不能越界。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 10.9, &apos;abc&apos;]</span><br><span class="line">print(list1[0])   # 获取下标是0的元素</span><br><span class="line">print(list1[3])   # 获取下标是3的元素</span><br><span class="line">print(list1[-1])  # 获取最后一个元素</span><br><span class="line">print(list1[-2])  # 获取倒数第二个元素</span><br><span class="line">print(list1[5])   #IndexError: list index out of range</span><br><span class="line">print(list1[-6])  #IndexError: list index out of range</span><br></pre></td></tr></table></figure></p>
-<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">10.9</span><br><span class="line">abc</span><br><span class="line">10.9</span><br><span class="line">IndexError: list index out of range</span><br></pre></td></tr></table></figure></p>
-<p>方法2：获取列表中的部分元素（通过元素对应的下标）。<br>列表名[开始下标：结束下标]<br>获取到的是从开始下标到结束下标前的所有的元素，组成的列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list3 = [2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">print(list3[1:4])  # 获取下标为1开始到下标3的所有的元素</span><br><span class="line">print(list3[:4])   # 获取从第一个元素开始到下标为3的所有元素</span><br><span class="line">print(list3[2:])   # 获取下标为2开始到列表最后的所有元素</span><br><span class="line">print(list3[:])    # 获取列表开始到结束的所有元素</span><br></pre></td></tr></table></figure></p>
-<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[10.5, &apos;a&apos;, &apos;abc&apos;]</span><br><span class="line">[2, 10.5, &apos;a&apos;, &apos;abc&apos;]</span><br><span class="line">[&apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">[2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br></pre></td></tr></table></figure></p>
-<p>列表名[开始下标:结束下标:步长]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(list3[0:4:2])  # 从下标为0开始到下标为3，每2个元素取一个</span><br></pre></td></tr></table></figure>
-<p>执行代码结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, &apos;a&apos;]</span><br></pre></td></tr></table></figure>
-<p>获取列表中所有下标是偶数的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list3 = [2, 10.5, &apos;a&apos;, &apos;abc&apos;, 10]</span><br><span class="line">print(list3[::2])</span><br></pre></td></tr></table></figure>
-<p>执行代码结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, &apos;a&apos;, 10]</span><br></pre></td></tr></table></figure>
-<p>##1.3 遍历列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">for item in list4:</span><br><span class="line">    if item % 2 == 0:</span><br><span class="line">        print(item，end=&apos; &apos;)</span><br></pre></td></tr></table></figure></p>
-<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">34 6 2 8 4</span><br></pre></td></tr></table></figure></p>
-<p>计算列表中所有元素的和<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">sum1 = 0</span><br><span class="line">for item in list4:</span><br><span class="line">    sum1 += item</span><br><span class="line">print(sum1)</span><br></pre></td></tr></table></figure></p>
-<p>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l46</span><br></pre></td></tr></table></figure></p>
-<p>获取下标是奇数的元素<br>方法1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">i = 1</span><br><span class="line">while i &lt; len(list4):</span><br><span class="line">    print(list4[i])</span><br><span class="line">    i += 2</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">34</span><br><span class="line">2</span><br><span class="line">91</span><br></pre></td></tr></table></figure>
-<p>方法2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list4 = [1, 34, 6, 2, 8, 91, 4]</span><br><span class="line">i = 0</span><br><span class="line">while i &lt; len(list4):</span><br><span class="line">    if i % 2 == 0:</span><br><span class="line">        i += 1</span><br><span class="line">        continue</span><br><span class="line">    print(list4[i])</span><br><span class="line">    i += 1</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">34</span><br><span class="line">2</span><br><span class="line">91</span><br></pre></td></tr></table></figure>
-<p>##1.4 列表的元素添加<br>在一个空的列表中添加新的元素</p>
-<p>###1.4.1 append（）<br>append方法： 列表名.append(元素)<br>特点：append是将元素添加到列表的最后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个空列表</span><br><span class="line">list1 = []</span><br><span class="line">print(list1)</span><br><span class="line">list1.append(&apos;abc&apos;)</span><br><span class="line">print(list1)</span><br><span class="line">list1.append(10)</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br><span class="line">[&apos;abc&apos;]</span><br><span class="line">[&apos;abc&apos;, 10]</span><br></pre></td></tr></table></figure></p>
-<p>练习:找出列表中[1,34,5,6,89,3,2,4]所有的偶数,并且保存起来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list2 = []</span><br><span class="line">for item in [1,34,5,6,89,3,2,4]:</span><br><span class="line">	if item % 2 == 0:</span><br><span class="line">		list2.append(item)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[34, 6, 2, 4]</span><br></pre></td></tr></table></figure></p>
-<p>###1.4.2 insert（）<br>insert:  列表名.insert(下标，元素)。<br>在指定的下标元素前插入指定的元素。<br>注意：这里的下标可以越界（下标范围） 只不过值插入到了列表的末尾。但是取反范围（-1 ~ -len（list））就会报错：IndexError: list index out of range。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(1,&apos;a&apos;)</span><br><span class="line">print(list3)</span><br><span class="line"># 通过insert在4和5之间插入元素&apos;b&apos;;再在8的后面插入元素&apos;c&apos;</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(4, &apos;b&apos;)</span><br><span class="line">print(list3)</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(10, &apos;c&apos;)    # 当下标大于等于列表的长度，会插入到列表的最后</span><br><span class="line">print(list3)</span><br><span class="line">list3 = [1, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">list3.insert(0, &apos;d&apos;)    # 在列表的最前面插入一个元素</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1, &apos;a&apos;, 2, 3, 4, 5, 6, 7, 8]</span><br><span class="line">[1, 2, 3, 4, &apos;b&apos;, 5, 6, 7, 8]</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7, 8, &apos;c&apos;]</span><br><span class="line">[&apos;d&apos;, 1, 2, 3, 4, 5, 6, 7, 8]</span><br></pre></td></tr></table></figure></p>
-<p>##1.5 列表的修改<br>修改元素: 通过下标拿到对应的元素，然后重新赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5]</span><br><span class="line">list1[1] = 20  # 将下标是1的元素变成20</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 20, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
-<p>让列表中的所有元素变为原来的2倍<br>通过下标来确定列表中的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5]</span><br><span class="line">for x in range(0, len(list1)):</span><br><span class="line">    list1[x] = list1[x] * 2</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, 4, 6, 8, 10]</span><br></pre></td></tr></table></figure></p>
-<p>让列表中偶数位上的元素变为原来的2倍</p>
-<p>##1.6 列表的删除<br>删除元素</p>
-<p>##1.6.1 del<br>del语句: 在python中，del可以删除任何内容<br>del语句删除列表元素: del 列表名[下标]<br>删除下标为1的元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1 = &apos;Hello&apos;</span><br><span class="line">list1 = [&apos;a&apos;, str1, 10+20, &apos;b&apos;, True]</span><br><span class="line">print(list1)</span><br><span class="line">del list1[1]</span><br><span class="line">print(list1)</span><br><span class="line"># del list1[20]  # IndexError: list assignment index out of range</span><br></pre></td></tr></table></figure></p>
-<p>注意：这儿的下标不能越界<br>执行代码结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;Hello&apos;, 30, &apos;b&apos;, True]</span><br><span class="line">[&apos;a&apos;, 30, &apos;b&apos;, True]</span><br></pre></td></tr></table></figure></p>
-<p>练习:删除列表中所有的偶数<br>通过下标删除要注意下标的重新分配的问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list2 = [6, 2, 3, 5, 10, 6, 7, 8]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list2):</span><br><span class="line">    if list2[index] % 2 == 0:</span><br><span class="line">        del list2[index]</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, 5, 7]</span><br></pre></td></tr></table></figure></p>
-<h3 id="isinstance-判断变量类型"><a href="#isinstance-判断变量类型" class="headerlink" title="isinstance 判断变量类型"></a>isinstance 判断变量类型</h3><p>isinstance(变量,类型):判断指定变量/值是否是指定的类型。返回值：bool类型<br>str(字符串)、int(整型)、float(浮点型)、bool(布尔)、list(列表)、tuple(元祖)、dict(字典)、set(集合)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = isinstance(&apos;aa&apos;, str)  # 获取&apos;aa&apos;是否是字符串</span><br><span class="line">print(re)</span><br></pre></td></tr></table></figure></p>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure></p>
-<p>删除列表中的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list3 = [&apos;a&apos;, 1, 20, &apos;pp&apos;, 19.3, &apos;ohk&apos;]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list3):</span><br><span class="line">    if isinstance(list3[index], str):</span><br><span class="line">        del list3[index]</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 20, 19.3]</span><br></pre></td></tr></table></figure></p>
-<p>##1.6.2 通过remove方法删除指定元素<br>remove（）删除指定元素<br>格式: 列表名.remove(元素)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list4 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, 3]</span><br><span class="line">list4.remove(&apos;c&apos;)</span><br><span class="line">print(list4)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;b&apos;, 1, 2, 3]</span><br></pre></td></tr></table></figure></p>
-<p>使用remove删除列表元素的时候，如果指定的元素在列表中有多个，只删除第一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list4 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, 1, 2, &apos;c&apos;]</span><br><span class="line">list4.remove(&apos;c&apos;)</span><br><span class="line">print(list4)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;b&apos;, 1, 2, 3]</span><br></pre></td></tr></table></figure></p>
-<p>删除列表[1,3,4,7,8,2,3,4,1] 中所有的奇数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">list5 = [1, 3, 4, 7, 8, 2, 3, 4, 1]</span><br><span class="line">index = 0</span><br><span class="line">while index &lt; len(list5):</span><br><span class="line">    value = list5[index]</span><br><span class="line">    if value % 2 != 0:</span><br><span class="line">        list5.remove(value)</span><br><span class="line">    else:</span><br><span class="line">        index += 1</span><br><span class="line">print(list5)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[4, 8, 2, 4]</span><br></pre></td></tr></table></figure></p>
-<p>##1.6.3 使用pop()方法删除指定下标的元素<br>格式1: 列表名.pop(下标)  从列表中取出指定下标对应的元素<br>格式2: 列表名.pop()  从列表中取出最后一个元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list6 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">delitem = list6.pop(1)  # 将下标是1的元素从list6中取出，并且存到变量delitem中</span><br><span class="line">print(delitem, list6)</span><br><span class="line"></span><br><span class="line">del_item2 = list6.pop()</span><br><span class="line">print(del_item2, list6)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 [1, 3, 4, 5, 6]</span><br><span class="line">6 [1, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
-<p>将一个列表[1,2,3,4,5,6]中的元素全部取出放到另外一个列表里面变成[6,5,4,3,2,1]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">list2 = []</span><br><span class="line">while len(list1) &gt; 0:</span><br><span class="line">    #从前往后取</span><br><span class="line">    value = list1.pop(0)#移除list1[0]=1 列表list1 =[2, 3, 4, 5, 6] 在循环里就是重复去列表的下标为0的元素 并赋值</span><br><span class="line">    list2.insert(0, value)#插入到下标为0的元素之前 </span><br><span class="line"></span><br><span class="line">    #从后往前取</span><br><span class="line">    value = list1.pop()</span><br><span class="line">    list2.append(value)</span><br><span class="line"></span><br><span class="line">print(list1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br><span class="line">[6, 5, 4, 3, 2, 1]</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-列表的基本操作"><a href="#2-列表的基本操作" class="headerlink" title="2 列表的基本操作"></a>2 列表的基本操作</h1><p>1.求列表长度：len()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3, 4, 5, 6]</span><br><span class="line">length = len(list1)</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure></p>
-<p>2.列表的 + 操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 列表1 + 列表2 ： 将列表2和列表2中的元素，组合成一个新的列表：</span><br><span class="line">list2 = [1, 2, 3, 4] + [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure></p>
-<p>3.列表的 * 操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list3 = [10, 2]*4</span><br><span class="line">print(list3)</span><br></pre></td></tr></table></figure></p>
-<p>4.in 和 not in<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 元素 in 列表 ：  判断指定的元素是否在指定的列表中</span><br><span class="line">list4 = [&apos;abc&apos;, &apos;123&apos;, 1, &apos;04&apos;, 10]</span><br><span class="line">re = &apos;abc&apos; in list4</span><br><span class="line">re2 = &apos;ab&apos; in list4</span><br><span class="line">print(re, re2)</span><br><span class="line"># 元素 not in 列表 ：  判断指定的元素是否不在指定的列表中</span><br><span class="line">list4 = [&apos;abc&apos;, &apos;123&apos;, 1, &apos;04&apos;, 10]</span><br><span class="line">re2 = &apos;ab&apos; not in list4</span><br><span class="line">print(re2)</span><br></pre></td></tr></table></figure></p>
-<p>5.获取列表中的最大值<br>格式：max()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2 = [1, 2, 3, 4]</span><br><span class="line">max(list2)</span><br></pre></td></tr></table></figure></p>
-<p>6.获取列表中的最大值</p>
-<p>格式：min()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]</span><br><span class="line">min(list2)</span><br></pre></td></tr></table></figure>
-<p>练习：求表演的平均数（10/5个裁判，给表演打分，去掉一个最高分，一个最低分，求最后的平均分数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import  math</span><br><span class="line"># 随机产生 5 个分数</span><br><span class="line">scores = []</span><br><span class="line">for _ in range(5):</span><br><span class="line">    value = random.randint(1, 10)</span><br><span class="line">    scores.append(value)</span><br><span class="line">print(scores)</span><br><span class="line"># 去掉 最高 和最低 分</span><br><span class="line">max1 = max(scores)</span><br><span class="line">min1 = min(scores)</span><br><span class="line">scores.remove(max1)</span><br><span class="line">scores.remove(min1)</span><br><span class="line"># 计算平均数</span><br><span class="line"># sum（列表）：计算列表中所有的元素的和</span><br><span class="line">print(sum(scores)/len(scores))</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[6, 2, 2, 6, 3]</span><br><span class="line">3.6666666666666665</span><br></pre></td></tr></table></figure>
-<p>7.将其他的数据装换列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 6.将其他的数据装换列表</span><br><span class="line"># 格式： list（数据）</span><br><span class="line">list1 = list(&apos;abcdef&apos;)</span><br><span class="line">print(list1)</span><br><span class="line"># 将范围（range）转换成列表</span><br><span class="line">list1 = list(range(10))</span><br><span class="line">print(list1)</span><br><span class="line"># 将 （不是仅仅将列表的元素凭借成字符串的，而是将整个列表所有的结构都张欢成字符串结构）</span><br><span class="line">str1 = str([1, 2, 3, 4, 5, &apos;a&apos;])</span><br><span class="line">print(str1)</span><br></pre></td></tr></table></figure>
-<p>执行代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="line">[1, 2, 3, 4, 5, &apos;a&apos;]</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-07-29T09:31:53.254Z"><a href="/2018/07/29/Python3基础/第八天Python3函数/">2018-07-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/07/29/Python3基础/第八天Python3函数/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>[TOC]</p>
-<h1 id="Python3-函数（上）"><a href="#Python3-函数（上）" class="headerlink" title="Python3 函数（上）"></a>Python3 函数（上）</h1><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
-<p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
-<h2 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1.函数的定义"></a>1.函数的定义</h2><p>a.格式<br>def  函数名(参数列表):<br>    说明文字<br>    函数体<br>def: 是Python中声明函数的关键字<br>函数名：标识符，PEP8 （小写 下滑线）见名知义（根据函数名大概就知道函数的功能）<br>（）：固定格式，不能省略<br>参数列表：参数的作用就是从外面往函数中传值。<br>一个函数可以没有参数，也可以有多个参数（多个参数用逗号隔开）<br>冒号：是固定的格式<br>说明文字：对函数功能进行说明<br>函数体：就是实现函数功能的代码段<br>b.对于初学者来说，声明函数的步骤<br>1.确定函数的功能（确定函数是干什么用的）<br>2.确定函数名 （根据功能确定函数名）<br>3.确定参数（确定是否有参数，确定参数有几个，看实现这么功能需不需要从外面传值进去）<br>4.确定是否需要返回值（返回值：就是函数返回给调用者的数据。Python中所有的函数都有返回值，默认是None）<br>5.实现函数的功能</p>
-<p>注意：函数只有在调用的时候才会执行</p>
-<p>##2.函数的调用</p>
-<p>格式：<br>函数名（参数列表）</p>
-<p>函数名：你声明的需要调用的函数（已经声明过的函数）<br>函数列表：实参<br>调用过程，就是用实参给形参赋值，并且执行函数体获取返回值<br>函数的</p>
-<p>练习：让我们使用函数来输出”Hello World！”：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 声明函数aaa</span><br><span class="line">def aaa():</span><br><span class="line">    &quot;&quot;&quot;打印‘hello python’&quot;&quot;&quot;</span><br><span class="line">    print(&apos;hello python&apos;)</span><br><span class="line"># 调用函数aaa</span><br><span class="line">aaa()</span><br></pre></td></tr></table></figure>
-<p>以上代码输出结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello python</span><br><span class="line">print(aaa())</span><br></pre></td></tr></table></figure>
-<p>注意：<br>1.一个函数声明后，可以调用多次<br>2.Python中所有的函数调用表达式都有值</p>
-<p>练习：写一个函数，去打印10的阶层（1 <em> 2 </em> 3 <em> …… </em> 10）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def jieceng():</span><br><span class="line">    &apos;&apos;&apos;打印10!&apos;&apos;&apos;</span><br><span class="line">    num = 10</span><br><span class="line">    jieceng=1</span><br><span class="line">    for x in range(1,num+1):</span><br><span class="line">        jieceng *=x</span><br><span class="line">    print(jieceng)</span><br><span class="line"></span><br><span class="line">jieceng()</span><br></pre></td></tr></table></figure>
-<p>以上代码输出结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3628800</span><br></pre></td></tr></table></figure>
-<h2 id="3-带参数的函数"><a href="#3-带参数的函数" class="headerlink" title="3.带参数的函数"></a>3.带参数的函数</h2><p>格式：<br>def 函数名（参数列表）<br>    说明文字<br>    函数体<br>形参：获取从外面传递给函数内部的值<br>函数的调用<br>函数名（实参列表）<br>实参：调用函数的时候给函数传的值</p>
-<p>例题：写一个函数，打印两个数的和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 形参就是变量名</span><br><span class="line">def my_sum(num1, num2):</span><br><span class="line">    &apos;&apos;&apos;打印num1和num2的和&apos;&apos;&apos;</span><br><span class="line">    print(num1+num2)</span><br></pre></td></tr></table></figure>
-<h2 id="4-带参数的函数调用"><a href="#4-带参数的函数调用" class="headerlink" title="4.带参数的函数调用"></a>4.带参数的函数调用</h2><p>注意！：函数调用的时候一定要保证每个形参都有值</p>
-<p>1.位置参数（用实参依次给形参赋值）</p>
-<p>2.关键字参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_sum(10, 12)# 执行注代码：现将num1 =10 num2= 20 再执行my_sum的函数</span><br><span class="line">my_sum(num2=15, num1=5)</span><br><span class="line"># my_sum(30) #TypeError</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">22</span><br><span class="line">20</span><br><span class="line">TypeError: my_sum() missing 1 required positional argument: &apos;num2&apos;</span><br></pre></td></tr></table></figure>
-<p>练习：打印一个数的立方</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 打印一个数的立方</span><br><span class="line">def my_cube(num1):</span><br><span class="line">    &apos;&apos;&apos;num1的立方&apos;&apos;&apos;</span><br><span class="line">    print(num1**3)</span><br><span class="line"># 调用</span><br><span class="line">my_cube(10)</span><br><span class="line">my_cube(num1=10)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1000</span><br><span class="line">1000</span><br></pre></td></tr></table></figure>
-<h2 id="5-参数的默认值"><a href="#5-参数的默认值" class="headerlink" title="5.参数的默认值"></a>5.参数的默认值</h2><p>在Python中，函数的参数可以设置默认值(函数声明的时候给参数赋值)</p>
-<p>如果参数设置了默认值，那么调用函数的时候，这个参数可以传参，也可以不传参</p>
-<p>练习：写一个函数，问候某人（打印：xxx ,how are  you !）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def say_hi(name=&apos;xxx&apos;):</span><br><span class="line">    &apos;&apos;&apos;问候&apos;&apos;&apos;</span><br><span class="line">    print(&apos;%s,how are you !&apos;%(name))</span><br><span class="line"># 函数调用的要求：保证每个参数有值</span><br><span class="line">say_hi()</span><br><span class="line">say_hi(&apos;张三&apos;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxx,how are you !</span><br><span class="line">张三,how are you !</span><br></pre></td></tr></table></figure>
-<p>注意;如果声明函数的时候，函数中有多个参数，有默认值参数必须放到没有默认值的参数的后面，否则报错。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def say_hello(message, name=&apos;xxx&apos;):   say_hello(name=&apos;xxx&apos;,message)SyntaxError: non-default argument follows default argument</span><br><span class="line">    &apos;&apos;&apos;wenhou&apos;&apos;&apos;</span><br><span class="line">    print(&apos;%s, %s &apos;%(name,message))</span><br><span class="line">say_hello(&apos;你吃饭了么？&apos;,&apos;李四&apos;)</span><br><span class="line">say_hello(&apos;最近好么？&apos;)</span><br><span class="line">say_hello(name=&apos;小花&apos;,message=&apos;i like you !&apos;)</span><br><span class="line">say_hello(message=&apos;我恨你！！&apos;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">李四, 你吃饭了么？ </span><br><span class="line">xxx, 最近好么？ </span><br><span class="line">小花, i like you ! </span><br><span class="line">xxx, 我恨你！！</span><br></pre></td></tr></table></figure>
-<h2 id="6-参数的不确定"><a href="#6-参数的不确定" class="headerlink" title="6.参数的不确定"></a>6.参数的不确定</h2><p>参数个数不确定的时候，就在参数列表中声明一个变量前面加一个*号</p>
-<p>这个时候这个变量就变成了元组。函数调用的时候，所有的实参都会添加这个元组中的</p>
-<p>练习：写一个函数，求多个数的和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def my_sum2(*nums):#变成一个元组</span><br><span class="line">    &apos;&apos;&apos;多个数的求和&apos;&apos;&apos;</span><br><span class="line">    sum1 = 0</span><br><span class="line">    for item in nums:</span><br><span class="line">        sum1 += item</span><br><span class="line">    print(sum1)</span><br><span class="line"></span><br><span class="line">my_sum2(10,23,45)   #(10, 23, 45)</span><br><span class="line">my_sum2(12,2,30)</span><br><span class="line">my_sum2(1,2,)</span><br><span class="line">my_sum2(1,2,4,7,9,)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">78</span><br><span class="line">44</span><br><span class="line">3</span><br><span class="line">23</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
 </article>
 
 
@@ -983,83 +740,138 @@ print(sum1)
 
 
 
-<nav id="pagination">
-  
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
 
-</nav>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
 </div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 JK21
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
 
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
-  <ul class="entry">
+    </div>
     
-      <li>
-        <a href="/2018/07/29/test/">test</a>
-      </li>
-    
-      <li>
-        <a href="/2018/07/29/Python3基础/第四天Python3基本语法if/"></a>
-      </li>
-    
-      <li>
-        <a href="/2018/07/29/Python3基础/第十天Python3函数变量/"></a>
-      </li>
-    
-      <li>
-        <a href="/2018/07/29/Python3基础/第十四天Python3类与对象/"></a>
-      </li>
-    
-      <li>
-        <a href="/2018/07/29/Python3基础/第十五天Python导入PyGame/"></a>
-      </li>
-    
-  </ul>
-</div>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
 
 
-  
-
-  
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  <p>
-  
-  &copy; 2018 JK21
-  
-  All rights reserved.</p>
-  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</div>
-<div class="clearfix"></div>
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<!-- Google Analytics -->
 <script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
 </script>
 
 
-<div id='bg'></div>
+  </div>
 </body>
 </html>

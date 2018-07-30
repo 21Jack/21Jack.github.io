@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>jk21wp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="jk21wp">
+<meta property="og:url" content="http://jk21wp.coding.me/page/4/index.html">
+<meta property="og:site_name" content="jk21wp">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jk21wp">
+  
+    <link rel="alternative" href="/atom.xml" title="jk21wp" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">JK21</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">刻苦学习，解决眼前的苟且，追寻诗和远方...</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">JK21</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">JK21</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">刻苦学习，解决眼前的苟且，追寻诗和远方...</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-Python3基础/Python第十八天网络基础网上下载文字图片服务端客户端访问" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/29/Python3基础/Python第十八天网络基础网上下载文字图片服务端客户端访问/" class="article-date">
+      <time datetime="2018-07-29T09:31:06.398Z" itemprop="datePublished">2018-07-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#获取网络数据</p>
+<p>###TCP/IP协议<br>TCP/IP协议涵盖了OSI参考模型的第三层、第四层，即网络层、传输层。TCP/IP也不是只有TCP + IP这两种协议，它是协议栈（簇）的统称。</p>
+<p>传输层有两个协议：TCP和UDP</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">TCP协议(Transmission Control Protocol，传输控制协议)</th>
+<th style="text-align:left">UDP协议(User Data Protocol，用户数据报协议)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">需要传输的文件分段传输</td>
+<td style="text-align:left">一个数据包就能完成数据通信</td>
+</tr>
+<tr>
+<td style="text-align:left">建立会话</td>
+<td style="text-align:left">不需要建立会话</td>
+</tr>
+<tr>
+<td style="text-align:left">可靠传输</td>
+<td style="text-align:left">不可靠传输</td>
+</tr>
+<tr>
+<td style="text-align:left">流量控制</td>
+<td style="text-align:left">不需要流量控制</td>
+</tr>
+</tbody>
+</table>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>URL的全称是 <strong>Uniform Resource Locator</strong>（统一资源定位符）</p>
+<h6 id="URL的基本格式-协议-主机地址-路路径"><a href="#URL的基本格式-协议-主机地址-路路径" class="headerlink" title="URL的基本格式 = 协议://主机地址/路路径"></a>URL的基本格式 = 协议://主机地址/路路径</h6><p><strong>协议：</strong>不同的协议，代表着不同的资源查找方式、资源传输方式<br><strong>主机地址：</strong>存放资源的主机（服务器）的IP地址（域名）<br><strong>路径：</strong>资源在主机（服务器）中的具体位置</p>
+<h5 id="URL中常见的协议"><a href="#URL中常见的协议" class="headerlink" title="URL中常见的协议"></a>URL中常见的协议</h5><p><strong>HTTP</strong><br>HTTP的全称是Hypertext Transfer Protocol，超文本传输协议<br>规定客户端和服务器之间的数据传输格式<br>让客户端和服务器能有效地进行数据沟通</p>
+<p>访问的是远程的网络资源，格式是http://<br>http协议是在网络开发中最常用的协议</p>
+<p><strong>file</strong><br>访问的是本地计算机上的资源，格式是file://（不用加主机地址）</p>
+<p><strong>mailto</strong><br>访问的是电子邮件地址，格式是mailto:</p>
+<p><strong>FTP</strong><br>访问的是共享主机的文件资源，格式是ftp://</p>
+<h3 id="HTTP的基本通信过程"><a href="#HTTP的基本通信过程" class="headerlink" title="HTTP的基本通信过程"></a>HTTP的基本通信过程</h3><p>请求：客户端向服务器索要数据<br>响应：服务器返回客户端相应的数据</p>
+<h4 id="HTTP通信过程-请求"><a href="#HTTP通信过程-请求" class="headerlink" title="HTTP通信过程-请求"></a>HTTP通信过程-请求</h4><p><strong>请求头：</strong>包含了了对客户端的环境描述、客户端请求信息等<br>GET /minion.png HTTP/1.1 // 包含了请求方法、请求资源路径、 HTTP协议版本<br>Host: 120.25.226.186:32812 // 客户端想访问的服务器主机地址<br>User-Agent: Mozilla/5.0 // 客户端的类型，客户端的软件环境<br>Accept: text/html, <em>/</em> // 客户端所能接收的数据类型<br>Accept-Language: zh-cn // 客户端的语言环境<br>Accept-Encoding: gzip // 客户端支持的数据压缩格式</p>
+<p><strong>请求体：</strong>客户端发给服务器的具体数据，比如文件数据(POST请求才会有)</p>
+<h4 id="HTTP通信过程-响应"><a href="#HTTP通信过程-响应" class="headerlink" title="HTTP通信过程-响应"></a>HTTP通信过程-响应</h4><p><strong>响应头：</strong>包含了了对服务器的描述、对返回数据的描述<br>HTTP/1.1 200 OK // 包含了HTTP协议版本、状态码、状态英文名称<br>Server: Apache-Coyote/1.1 // 服务器的类型<br>Content-Type: image/jpeg // 返回数据的类型<br>Content-Length: 56811 // 返回数据的长度<br>Date: Mon, 23 Jun 2014 12:54:52 GMT // 响应的时间</p>
+<p><strong>响应体：</strong>服务器器返回给客户端的具体数据，比如文件数据</p>
+<h3 id="01-获取网络数据"><a href="#01-获取网络数据" class="headerlink" title="01-获取网络数据"></a>01-获取网络数据</h3><p>Python中使用第三方库requests来获取网络数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
+<p>1.确认请求的地址（url）—-&gt;统一资源定位器(Uniform Resource Locator)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = &apos;https://www.apiopen.top/satinApi&apos;</span><br></pre></td></tr></table></figure>
+<p>2.通过GET方式请求数据，请求结束后会返回响应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(url, &#123;&apos;type&apos;: 1, &apos;page&apos;: 1&#125;)</span><br></pre></td></tr></table></figure>
+<p>GET 传参方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.直接拼接在url后面（?参数=值&amp;参数2=值2....）</span><br><span class="line">b.给get函数中的第二个参数传参（&#123;参数:值, 参数2:值2...&#125;）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url = &apos;https://www.apiopen.top/satinApi?type=1&amp;page=1&apos;</span><br><span class="line">response = requests.get(url)</span><br><span class="line"></span><br><span class="line">url = &apos;https://www.apiopen.top/satinApi&apos;</span><br><span class="line">response = requests.get(url, &#123;&apos;type&apos;: 1, &apos;page&apos;: 1&#125;)</span><br></pre></td></tr></table></figure>
+<p>3.获取数据内容</p>
+<p>1&gt;获取字符串形式的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(response.text)</span><br></pre></td></tr></table></figure>
+<p>2&gt;获取json格式的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(response.json())</span><br></pre></td></tr></table></figure>
+<p>3&gt;获取二进制形式的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(response.content)</span><br></pre></td></tr></table></figure>
+<h3 id="02-获取网络图片"><a href="#02-获取网络图片" class="headerlink" title="02-获取网络图片"></a>02-获取网络图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"># 1.创建url</span><br><span class="line">url = &apos;http://cdnq.duitang.com/uploads/item/201505/13/20150513212949_j5aJU.thumb.700_0.jpeg&apos;</span><br><span class="line"></span><br><span class="line"># 2.获取网络数据</span><br><span class="line">response = requests.get(url)</span><br><span class="line"></span><br><span class="line"># 3.拿二进制数据</span><br><span class="line">data = response.content</span><br><span class="line">print(data)</span><br><span class="line"></span><br><span class="line"># 4.保存图片</span><br><span class="line">with open(&apos;luffy.jpeg&apos;, &apos;bw&apos;) as f:</span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
+<p>###03-TCP编程</p>
+<p>socket又叫套接字，我们把进行网络通信的一端就叫一个套接字<br>socket编程，就是通过程序实现通信的两端（服务器和客户端）<br>python中支持socket有三种，分别是基于TCP、UDP和IP的，叫做TCP套接字、UDP套接字和原始套接字</p>
+<p>基于TCP的服务器端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 基于TCP的服务器端</span><br><span class="line"></span><br><span class="line"># 1.创建套接字对象，并且制定服务类型</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">family:</span><br><span class="line">AF_INET --&gt; ipv4</span><br><span class="line">AF_INET6 --&gt; ipv6</span><br><span class="line"></span><br><span class="line">type:</span><br><span class="line">SOCK_STREAM --&gt; TCP</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">server = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line"># 2.绑定IP地址和端口</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">地址：（IP地址, 端口）</span><br><span class="line">端口：</span><br><span class="line">不同端口绑定不同的服务，同一时间同一个端口只能绑定一个服务</span><br><span class="line">0-65535，但是小于等于1024的端口叫“著名端口”，用于绑定著名服务（比如http服务，邮件服务等）</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">server.bind((&apos;10.7.154.53&apos;, 8080))</span><br><span class="line"></span><br><span class="line"># 3.监听访问</span><br><span class="line">server.listen()</span><br><span class="line">print(&apos;开始监听...&apos;)</span><br><span class="line"></span><br><span class="line"># 让服务端一直运行，等待访问</span><br><span class="line">while True:</span><br><span class="line">    # 当有客户端访问当前服务器就建立连接</span><br><span class="line">    connect, addr = server.accept() # 当有一个客户端来连接当前服务器的时候才会执行</span><br><span class="line">    print(&apos;与客户端连接成功...&apos;)</span><br><span class="line"></span><br><span class="line">    # 通过会话给客户端发送消息</span><br><span class="line">    # 发送的内容必须输二进制数据</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    字符串转二进制：字符串.encode(&apos;utf-8&apos;)</span><br><span class="line">    二进制转字符串：二进制数据.decode(&apos;utf-8&apos;)</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    while 1:</span><br><span class="line">        message = input(&apos;&gt;&gt;&gt;&apos;)</span><br><span class="line">        connect.send(message.encode(&apos;utf-8&apos;))</span><br><span class="line"></span><br><span class="line">        # 接收客户端发送给服务器的消息</span><br><span class="line">        data = connect.recv(1024)</span><br><span class="line">        print(data.decode(&apos;utf-8&apos;))</span><br><span class="line"></span><br><span class="line">    # 关闭连接</span><br><span class="line">    # connect.close()</span><br></pre></td></tr></table></figure>
+<h5 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 1.创建套接字对象</span><br><span class="line">client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line"># 2.连接服务器</span><br><span class="line">client.connect((&apos;10.7.154.53&apos;, 12345))</span><br><span class="line"></span><br><span class="line"># 3.接收数据</span><br><span class="line">while 1:</span><br><span class="line">    data = client.recv(1024)</span><br><span class="line">    print(data.decode(&apos;utf-8&apos;))</span><br><span class="line"></span><br><span class="line">    # 4.给服务器发送数据</span><br><span class="line">    message = input(&apos;&gt;&gt;&gt;&apos;)</span><br><span class="line">    client.send(message.encode(&apos;utf-8&apos;))</span><br></pre></td></tr></table></figure>
+<p>注意 ： 如果</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/28/hello-world/" class="article-date">
+      <time datetime="2018-07-28T02:13:00.657Z" itemprop="datePublished">2018-07-28</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/07/28/hello-world/">Hello World</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 JK21
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
